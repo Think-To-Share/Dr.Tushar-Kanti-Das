@@ -1,0 +1,123 @@
+.footer-section{
+    background-image: url(../images/footer-bg.jpg);
+    background-repeat: repeat;
+    .main{
+        padding: 0;
+     .dr-name{
+        padding-top: 60px;
+        text-align: center;
+        color: #ffffff;
+        font-family: $secondary-font;
+        font-weight: 400;
+        @include font-size(2.2rem);
+    }
+    .dr-qualification{
+        text-align: center;
+        color: #ffffff;
+        font-family: $secondary-font;
+        font-weight: 400;
+        @include font-size(1.2rem);
+    }
+    .dr-footer-menu{
+        ul {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            align-items: center;
+            flex-direction: column;
+            // @media (min-width:768px) {
+            //     gap: 30px;
+            //     flex-direction: row;
+            // }
+            @media (min-width: 992px) {
+                gap: 60px;
+                flex-direction: row;
+            }
+            li {
+                list-style-type: none;
+                @media (min-width:768px) {
+                    padding: 54px 0;
+                }
+                a{
+                    text-decoration: none;
+                    @include font-size(1.2rem);
+                    text-transform: capitalize;
+                    color: #f2f2f2;
+                    font-family: $primary-font;
+                    font-weight: 400;
+                    transition: color 0.3s ease-in-out;
+                    &:hover{
+                        color: $secondary-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .hr-theme-slash-2 {
+        display: flex;
+
+        .hr-line-l {
+          width: 100%;
+          position: relative;
+          margin: 25px 0;
+          border-bottom: 1px solid #9d9d9d;
+        }
+
+        .hr-line-r {
+            width: 100%;
+            position: relative;
+            margin: 25px 0;
+            border-bottom: 1px solid #9d9d9d;
+        }
+
+        .hr-icon {
+            position: relative;
+            top: 3px;
+            a{
+                height: 50px;
+                width: 50px;
+                position: relative;
+                display: inline-block;
+                border-radius: 100%;
+                border:1px solid #9d9d9d;
+                svg{
+                    height: 20px;
+                    width: 20px;
+                    fill: #9d9d9d;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+    }
+    .copyright-text{
+        @include font-size(1.2rem);
+        text-align: center;
+        color: #838383;
+        text-transform: uppercase;
+        padding-bottom: 40px;
+        font-family: $primary-font;
+        font-weight: 400;
+        padding-top: 30px;
+        a{
+            text-decoration: none;
+            color: #ffffff;
+            transition: all 0.2s ease-in-out;
+            font-family: $primary-font;
+            font-weight: 400;
+            @include font-size(1.1rem);
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }   
+    }
+    
+}

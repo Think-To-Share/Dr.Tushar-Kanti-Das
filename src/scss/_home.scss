@@ -1,0 +1,120 @@
+//  Available Locations section Start
+.available-locations-section{
+    margin-bottom: 50px;
+    .available-locations-heading{
+        color: #1c2738;
+        font-family: $secondary-font;
+        font-weight: 400;
+        @include font-size(2.8rem);
+        text-align: center;
+        text-transform: capitalize;
+        padding-bottom: 20px;
+    }
+    .available-locations-text{
+        .card{
+            border-radius: 10px;
+            border: none;
+            box-shadow:0 0 90px #cececf94;
+            transition: all 0.5s ease-in-out;
+            .img-container{
+                padding: 16px;
+                .card-img-top{
+                    border-radius: 10px;
+                }
+            }
+            .card-body{
+                text-align: center;
+                padding-bottom: 40px;
+                .card-date{
+                    font-family: $primary-font;
+                    font-weight: 500;
+                    color: #1c2738;
+                    @include font-size(1.3rem);
+                    padding: 0;
+                    margin: 0;
+                    padding-top: 10px;
+                    text-transform: uppercase;
+                }
+                .card-heading-text{
+                    font-family: $secondary-font;
+                    font-weight: 400;
+                    color: #1c2738;
+                    @include font-size(2.7rem);
+                    padding-top: 10px;
+                    text-transform: capitalize;
+                }
+                .card-text{
+                    font-family: $primary-font;
+                    font-weight: 300;
+                    color: #1c2738;
+                    @include font-size(1.3rem);
+                    padding-top: 10px;
+                    text-transform: capitalize;
+                }
+                .view-btn{
+                    font-family: $primary-font;
+                    font-weight: 600;
+                    color: #0b4e85;
+                    @include font-size(1.1rem);
+                    text-decoration: none;
+                    text-transform: uppercase;
+                }
+            }
+            &:hover{
+                background-color: $secondary-color;
+                color: #fff;
+            }
+        }
+    }
+}
+
+// about us section start
+.about-us-section{
+    margin-bottom: 50px;
+    .about-us-heading{
+        color: #1c2738;
+        font-family: $secondary-font;
+        font-weight: 400;
+        @include font-size(2.7rem);
+    }
+    .about-us-text{
+        font-family: $primary-font;
+        font-weight: 400;
+        color: #54575b;
+        @include font-size(0.9rem);
+        padding: 0;
+        margin: 0;
+        padding-bottom: 10px;
+    }
+    .about-us-text-second{
+        font-family: $primary-font;
+        font-weight: 400;
+        color: #6c6d6e;
+        @include font-size(0.9rem);
+        padding: 0;
+        margin: 0;
+    }
+    .about-us-btn-container{
+        width: 100%;
+        margin-top: 44px;
+        .about-us-btn{
+            text-decoration: none;
+            text-align: center;
+            color: #ffffff;
+            background-color: $primary-color;
+            @include font-size(0.9rem);
+            padding: 15px 20px;
+            display: inline-block;
+            font-family: $primary-font;
+            font-weight: 600;
+            border-radius: 5px;
+            border:1px solid $primary-color;
+            transition: all 0.3s ease-in-out;
+            text-transform: uppercase;
+            &:hover{
+                background-color: transparent;
+                color: $primary-color;
+            }
+        }
+    }
+}

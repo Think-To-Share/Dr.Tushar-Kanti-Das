@@ -29,5 +29,10 @@
     "> 1%",
     "iOS 7",
     "last 3 iOS versions"
-  ]
+  ],
+  "dependencies": {
+    "bootstrap": "^5.0.1",
+    "gsap": "^3.10.3",
+    "rfs": "^9.0.6"
+  }
 }
