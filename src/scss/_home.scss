@@ -1,3 +1,95 @@
+.homepage{
+    background-color: #f3f4f9;
+}
+// Mission Statement section start
+.mission-statement-section{
+    .mission-statement-column{
+        padding: 0;
+        .mission-statement-heading{
+            color: #1c2738;
+            font-family: $secondary-font;
+            font-weight: 400;
+            @include font-size(3.7rem);
+            span{
+                color: $primary-color;  
+            }
+        }
+        .mission-statement-text{
+            font-family: $primary-font;
+            font-weight: 500;
+            color: #6c6d6e;
+            padding: 0;
+            margin: 0;
+            @include font-size(1.1rem);
+            padding-top: 10px;
+        }
+        .mission-statement-text-second{
+            font-family: $primary-font;
+            font-weight: 500;
+            color: #6c6d6e;
+            padding: 0;
+            margin: 0;
+            @include font-size(1.1rem);
+            padding-top: 15px;
+            padding-bottom: 20px;
+        }
+        .mission-statement-pointer{
+            font-family: $primary-font;
+            font-weight: 500;
+            color: #19191a;
+            @include font-size(1.1rem);
+            line-height: 1.7;
+            .icon-box{
+                height:15px;
+                width: 15px;
+                position: relative;
+                display: inline-block;
+                border-radius: 100%;
+                background-color: #54b8e9;
+                vertical-align: middle;
+                svg{
+                    height: 8px;
+                    width: 8px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    fill: #fff;
+                }
+            }
+        }  
+        .mission-statement-btn-container{
+            width: 100%;
+            margin-top: 44px;
+            .mission-statement-btn{
+                text-decoration: none;
+                text-align: center;
+                color: #ffffff;
+                background-color: $primary-color;
+                @include font-size(0.9rem);
+                padding: 15px 20px;
+                display: inline-block;
+                font-family: $primary-font;
+                font-weight: 400;
+                border-radius: 5px;
+                border:1px solid $primary-color;
+                transition: all 0.3s ease-in-out;
+                text-transform: uppercase;
+                &:hover{
+                    background-color: transparent;
+                    color: $primary-color;
+                }
+            }
+        } 
+    }
+    .mission-statement-img{
+        padding: 0;
+        .mission-img{
+            width: 100%;
+        }
+    }
+    
+}
 //  Available Locations section Start
 .available-locations-section{
     margin-bottom: 50px;
@@ -5,7 +97,7 @@
         color: #1c2738;
         font-family: $secondary-font;
         font-weight: 400;
-        @include font-size(2.8rem);
+        @include font-size(3.7rem);
         text-align: center;
         text-transform: capitalize;
         padding-bottom: 20px;
@@ -15,7 +107,7 @@
             border-radius: 10px;
             border: none;
             box-shadow:0 0 90px #cececf94;
-            transition: all 0.5s ease-in-out;
+            transition: background-color 0.3s ease-in-out;
             .img-container{
                 padding: 16px;
                 .card-img-top{
@@ -34,6 +126,7 @@
                     margin: 0;
                     padding-top: 10px;
                     text-transform: uppercase;
+                    transition: color 0.3s ease-in-out;
                 }
                 .card-heading-text{
                     font-family: $secondary-font;
@@ -42,6 +135,7 @@
                     @include font-size(2.7rem);
                     padding-top: 10px;
                     text-transform: capitalize;
+                    transition: color 0.3s ease-in-out;
                 }
                 .card-text{
                     font-family: $primary-font;
@@ -50,22 +144,158 @@
                     @include font-size(1.3rem);
                     padding-top: 10px;
                     text-transform: capitalize;
+                    transition: color 0.3s ease-in-out;
                 }
                 .view-btn{
                     font-family: $primary-font;
                     font-weight: 600;
-                    color: #0b4e85;
+                    color: $primary-color;
                     @include font-size(1.1rem);
                     text-decoration: none;
                     text-transform: uppercase;
+                    transition: color 0.3s ease-in-out;
                 }
             }
             &:hover{
                 background-color: $secondary-color;
-                color: #fff;
+                .card-date{
+                    color: #7dc4f2;
+                }
+                .card-heading-text{
+                    color: #ffffff;
+                }
+                .card-text{
+                    color: #ffffff;
+                }
+                .view-btn{
+                    color: #7dc4f2;
+                }
             }
         }
     }
+}
+
+// Our Membership Benefits section start
+.membership-benefits-section{
+    margin-top: 80px;
+    margin-bottom: 200px;
+    .membership-main-section{
+        position: relative;
+        .membership-benefits-heading{
+            padding-top: 80px;
+            color: #1c2738;
+            font-family: $secondary-font;
+            font-weight: 400;
+            @include font-size(3.7rem);
+        }
+        .membership-benefits-heading-text{
+            margin: 0;
+            font-family: $primary-font;
+            font-weight: 400;
+            color: #54575b;
+            @include font-size(1.2rem);
+            padding: 10px 0;
+        }
+        .pointer{
+            padding: 0;
+            margin: 0;
+            color: #19191a;
+            @include font-size(1rem);
+            font-family: $primary-font;
+            font-weight: 400;
+            padding-top: 5px;
+            .icon-box{
+                height:15px;
+                width: 15px;
+                position: relative;
+                display: inline-block;
+                border-radius: 100%;
+                background-color: #54b8e9;
+                vertical-align: middle;
+                svg{
+                    height: 8px;
+                    width: 8px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    fill: #fff;
+                }
+            }
+        }
+        .membership-image{
+            display: flex;
+            margin: 0 auto;
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 3px 5px 17px 5px #f3f4f9cc;
+        }
+        .register-text{
+            position: absolute;
+            top: 85%;
+            display: flex;
+            width: 72%;
+            justify-content: space-between;
+            background-color: $secondary-color;
+            padding: 30px 40px;
+            border-radius: 15px;
+            .register-left{
+                .register-heading{
+                    color: #fff;
+                    font-family: $secondary-font;
+                    font-weight: 400;
+                    @include font-size(1.9rem);
+                    margin: 0;
+                }
+                .register-heading-text{
+                    padding: 0;
+                    margin: 0;
+                    font-family: $primary-font;
+                    font-weight: 400;
+                    color: #ffffff;
+                    @include font-size(0.9rem);
+                    padding-top: 5px;
+                }  
+            }
+            .register-right{
+                .register-btn-container{
+                    width: 100%;
+                    display: inline-flex;
+                    height: 100%;
+                    flex-direction: column;
+                    justify-content: center;
+                    .register-btn{
+                        text-decoration: none;
+                        text-align: center;
+                        color: #ffffff;
+                        background-color: #191919;
+                        @include font-size(0.9rem);
+                        padding: 15px 30px;
+                        display: inline-block;
+                        font-family: $primary-font;
+                        font-weight: 400;
+                        border-radius: 5px;
+                        border:1px solid #191919;
+                        transition: all 0.3s ease-in-out;
+                        text-transform: uppercase;
+                        svg{
+                            height: 12px;
+                            width: 12px;
+                            fill: #fff;
+                        }
+                    }
+                }   
+            } 
+        }
+    }  
+    .bg_icon{
+        position: relative;
+        .icon-bg{
+            position: absolute;
+            right: 30%;
+            top: 14px;
+        }
+    } 
 }
 
 // about us section start
@@ -75,7 +305,7 @@
         color: #1c2738;
         font-family: $secondary-font;
         font-weight: 400;
-        @include font-size(2.7rem);
+        @include font-size(3.1rem);
     }
     .about-us-text{
         font-family: $primary-font;
@@ -106,7 +336,7 @@
             padding: 15px 20px;
             display: inline-block;
             font-family: $primary-font;
-            font-weight: 600;
+            font-weight: 400;
             border-radius: 5px;
             border:1px solid $primary-color;
             transition: all 0.3s ease-in-out;
