@@ -33,6 +33,7 @@
   "dependencies": {
     "bootstrap": "^5.0.1",
     "gsap": "^3.10.3",
-    "rfs": "^9.0.6"
+    "rfs": "^9.0.6",
+    "tiny-slider": "^2.9.4"
   }
 }

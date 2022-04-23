@@ -90,6 +90,143 @@
     }
     
 }
+
+// Treatment section start
+.treatment-section{
+    margin-bottom: 50px;
+    .treatment-heading{
+        color: #1c2738;
+        font-family: $secondary-font;
+        font-weight: 400;
+        @include font-size(3.7rem);
+        text-align: center;
+    }
+    .slider-container{
+        position: relative;
+        padding: 0;
+        @media (min-width:768px) {
+            padding: 2rem 5rem;
+        }
+        .tns-outer{
+            .tns-controls{
+                    position: absolute;
+                    z-index: 3;
+                    transform: translate(-50% ,-50%);
+                    top: 50%;
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    left: 50%;
+                    pointer-events: none;
+                button{
+                    background: none;
+                    // border: none;
+                    height: 50px;
+                    width: 50px;
+                    border-radius: 50%;
+                    box-shadow: none;
+                    outline: none;
+                    position: relative;
+                    border: none;
+                    background: #fff;
+                    pointer-events: all;
+                    svg{
+                        fill: $secondary-color;
+                        height: 20px;
+                        width: 20px;
+                        display: block;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                    }
+                }
+            }
+        
+        }
+
+        .slides{
+            .slide{
+                .treatment-text{
+                    .card{
+                        border: none;
+                        border-radius: 15px;
+                        box-shadow:1px 1px 7px 0px rgb(206 206 207 / 26%);
+                        transition: background-color 0.3s ease-in-out;
+                        .treatment-img-container{
+                            .card-img-top{
+                                border-radius: 100%;
+                                width: 70%;
+                                display: flex;
+                                margin: 0 auto;
+                                border: 3px solid $primary-color;
+                                transition: border 0.3s ease-in-out;
+                            }
+                        }
+                        .card-body{
+                            text-align: center;
+                            .treatment-card-heading-text{
+                                color: #1c2738;
+                                font-family: $secondary-font;
+                                font-weight: 400;
+                                @include font-size(1.3rem);
+                                transition: color 0.3s ease-in-out;
+                                padding-top: 10px;
+                            }
+                            .treatment-view-btn{
+                                font-family: $primary-font;
+                                font-weight: 600;
+                                color: $primary-color;
+                                @include font-size(1.1rem);
+                                text-decoration: none;
+                                padding-top: 30px;
+                                display: inline-block;
+                                transition: color 0.3s ease-in-out;
+                            }
+                        }
+                        &:hover{
+                            background-color: $primary-color;
+                            .card-img-top{
+                                border: 3px solid #ffffff;
+                            }
+                            .treatment-card-heading-text{
+                                color: #ffffff;
+                            }
+                            .treatment-view-btn{
+                                color: #ffffff;
+                            }
+                        }
+                    }
+                }
+            }
+        }  
+    }
+    .treatment-btn-container{
+        width: 100%;
+        margin-top: 20px;
+        text-align: center;
+        .treatment-btn{
+            text-decoration: none;
+            text-align: center;
+            color: #ffffff;
+            background-color: $primary-color;
+            @include font-size(0.9rem);
+            padding: 15px 35px;
+            display: inline-block;
+            font-family: $primary-font;
+            font-weight: 400;
+            border-radius: 5px;
+            border:1px solid $primary-color;
+            transition: all 0.3s ease-in-out;
+            text-transform: uppercase;
+            &:hover{
+                background-color: transparent;
+                color: $primary-color;
+            }
+        }
+    }
+}
+
 //  Available Locations section Start
 .available-locations-section{
     margin-bottom: 50px;
@@ -390,6 +527,44 @@
             }
         }
     }
+}
+
+// faq section start 
+.faq-section{
+    margin-bottom: 80px;
+    .faq-section-heading{
+        font-family: $secondary-font;
+        font-weight: 400;
+        color: #1c2738;
+        @include font-size(3.1rem);
+        text-align: center;
+        padding-bottom: 30px;
+    }
+    .accordion-body{
+       background-color: #f3f4f9;
+       font-family: $primary-font;
+       font-weight: 400;
+       color: #7a7a7a;
+       @include font-size(1rem);
+    }
+    .accordion-button{
+        font-family: $secondary-font;
+        font-weight: 400;
+        color: #3f3f3f;
+        @include font-size(1.2rem);
+    }
+    .accordion-button:not(.collapsed){
+        background-color: #fff;
+    }
+    .accordion-button:focus {
+        box-shadow:none;
+    }
+    .accordion-item{
+        margin-bottom: 10px;
+        border-top: 0;
+        border-bottom: 0;
+    } 
+    
 }
 
 // about us section start
