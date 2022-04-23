@@ -552,9 +552,16 @@
         font-weight: 400;
         color: #3f3f3f;
         @include font-size(1.2rem);
-    }
-    .accordion-button:not(.collapsed){
-        background-color: #fff;
+        &::after{
+            background-image: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20448%20512%22%3E%3Cpath%20d%3D%22M432%20256c0%2017.69-14.33%2032.01-32%2032.01H256v144c0%2017.69-14.33%2031.99-32%2031.99s-32-14.3-32-31.99v-144H48c-17.67%200-32-14.32-32-32.01s14.33-31.99%2032-31.99H192v-144c0-17.69%2014.33-32.01%2032-32.01s32%2014.32%2032%2032.01v144h144C417.7%20224%20432%20238.3%20432%20256z%22%2F%3E%3C%2Fsvg%3E);
+        }
+        &:not(.collapsed){
+            background-color: #fff;
+            &::after{
+                background-image: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20448%20512%22%3E%3Cpath%20d%3D%22M400%20288h-352c-17.69%200-32-14.32-32-32.01s14.31-31.99%2032-31.99h352c17.69%200%2032%2014.3%2032%2031.99S417.7%20288%20400%20288z%22%2F%3E%3C%2Fsvg%3E);
+            }
+        }
+      
     }
     .accordion-button:focus {
         box-shadow:none;
