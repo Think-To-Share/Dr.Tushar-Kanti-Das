@@ -1,4 +1,5 @@
 import { tns } from 'tiny-slider/src/tiny-slider';
+import counterUp from 'counterup2';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { TextPlugin } from "gsap/TextPlugin";
@@ -137,3 +138,17 @@ if (document.querySelector('.treatment-section')) {
         }
     })
 }
+
+
+
+ScrollTrigger.create({
+    trigger: ".counter-section",
+    start: "center center",
+    onEnter: () => {
+        document.querySelectorAll( '.counter-section .counter-main .per-text-image .counter' ).forEach(el => {
+            counterUp( el, {
+                duration: 3000,
+            })
+        })
+    }
+});

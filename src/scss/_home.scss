@@ -625,8 +625,62 @@
     }
 }
 
+// counter section start 
+.counter-section{
+    margin-top: 50px;
+    margin-bottom: 80px;
+    .counter-main{
+        display: flex;
+        justify-content: center;
+        gap: 3px;
+        .per-text-image{
+            box-shadow:0 0 90px #cececf94;
+            border-radius: 15px;
+            padding: 40px 20px;
+            transition: all 0.2s ease-in-out;
+            width: 20%;
+           .icon-img{
+            display: flex;
+            margin: 0 auto;
+            }
+            .counter{
+                padding-top: 20px;
+                text-align: center;
+                font-family: $primary-font;
+                font-weight: 700;
+                color: #1c2738;
+                @include font-size(1.9rem);
+                margin: 0;
+                transition: color 0.2s ease-in-out;
+            }
+            .counter-text{
+                text-align: center;
+                font-family: $primary-font;
+                font-weight: 500;
+                color: #1c2738;
+                @include font-size(1.4rem);
+                margin: 0;
+                transition: color 0.2s ease-in-out;
+            } 
+            &:hover{
+                background-color: $primary-color;
+                transform: scale(1.1);
+                .counter{
+                    color: #ffffff;
+                }
+                .counter-text{
+                    color: #ffffff;
+                }
+            }
+        }
+        
+    }
+}
+
 // contact us section start
 .contact-us-section{
+    padding-bottom: 80px;
+    position: relative;
     .contact-us-heading{
         font-family: $secondary-font;
         font-weight: 400;
@@ -642,21 +696,24 @@
         @include font-size(1.1rem);
         text-align: center;
         margin: 0;
-        padding-bottom: 45px;
+        padding-bottom: 65px;
     }
     .contact-us-dr{
+        box-shadow:0 0 90px #cececf94;
+        border-radius: 15px;
+        padding: 50px 60px;
         .contact-us-dr-name{
             font-family: $secondary-font;
             font-weight: 400;
             color: #1c2738;
-            @include font-size(1.9rem);
+            @include font-size(2.5rem);
             margin: 0;
         }
         .contact-us-dr-qualification{
-            color: $secondary-color;
+            color: $primary-color;
             font-family: $primary-font;
             font-weight: 500;
-            @include font-size(1rem);
+            @include font-size(1.3rem);
             margin: 0;
         }
         .contact-us-chamber{
@@ -671,22 +728,157 @@
         .chamber-address{
             color: #1c2738;
             font-family: $primary-font;
-            font-weight: 500;
-            @include font-size(1.2rem);
+            font-weight: 400;
+            @include font-size(1.3rem);
             margin: 0;
+            line-height: initial;
+            padding-bottom: 15px;
             span{
-                color: #1c2738;
-                font-family: $primary-font;
                 font-weight: 500;
-                @include font-size(1.2rem);
-                margin: 0;  
             }
         }
+        .chamber-day{
+            color: #1c2738;
+            font-family: $primary-font;
+            font-weight: 600;
+            @include font-size(1.3rem);
+            margin: 0;
+            line-height: initial;
+            span{
+                font-weight: 500;
+            } 
+        }
         .chamber-time{
-
+            color: #1c2738;
+            font-family: $primary-font;
+            font-weight: 400;
+            @include font-size(1.3rem);
+            margin: 0;
         }
         .chamber-open{
-
+            color: #1c2738;
+            font-family: $primary-font;
+            font-weight: 300;
+            @include font-size(1.3rem);
+            margin: 0;
+            padding-top: 15px;
+        }
+    }
+    .contact-us-form{
+        background-color: #1770aa;
+        padding: 70px 60px;
+        border-radius: 15px;
+        position: relative;
+        margin-top: 120px;
+        .contact-us-form-text{
+            color: #ffffff;
+            font-family: $secondary-font;
+            font-weight: 400;
+            @include font-size(3.1rem);
+            margin: 0;
+            padding-bottom: 25px;
+        }
+        .contact-card{
+            form{
+                input{
+                    width: 100%;
+                    background-color: #1b7bb9;
+                    @include padding-right(1.2rem);
+                    @include padding-left(1.2rem);
+                    @include padding-top(0.9rem);
+                    @include padding-bottom(0.9rem);
+                    border-radius: 8px;
+                    border: none;
+                    color: #eef4f7;
+                    outline: none;
+                    @include font-size(0.9rem);
+                    font-family: $primary-font;
+                    font-weight: 400;
+                    &::placeholder{
+                        color: #eef4f7;
+                    }
+                }
+                textarea{
+                    width: 100%;
+                    @include padding-right(1.2rem);
+                    @include padding-left(1.2rem);
+                    @include padding-top(0.9rem);
+                    border-radius: 8px;
+                    border: none;
+                    @include font-size(0.9rem);
+                    outline: none;
+                    background-color: #1b7bb9;
+                    &::placeholder{
+                        color: #eef4f7;
+                    }
+                }
+                .btn-container{
+                    margin-top: 25px;
+                    .btn-submit{
+                        text-decoration: none;
+                        text-align: center;
+                        color: #ffffff;
+                        background-color: #191919;
+                        @include font-size(0.9rem);
+                        padding: 10px 50px;
+                        display: inline-block;
+                        font-family: $primary-font;
+                        font-weight: 600;
+                        border:2px solid #191919;
+                        transition: all 0.3s ease-in-out;
+                        text-transform: uppercase;
+                        border-radius: 5px;
+                        width: 100%;
+                        @media (min-width:576px) {
+                            width: auto;
+                        }
+                       
+                    }
+                }
+            }
+        }
+        .contact-image-text{
+            width: 74%;
+            position: absolute;
+            top: -10%;
+            left: 35%;
+            .contact-link{
+                display: block;
+                background-color: $primary-color;
+                text-decoration: none;
+                border-radius: 20px;
+                .phone-text{
+                    display: flex;
+                    padding: 11px;
+                    .phone-image{
+                    }
+                    .phone-number-text{
+                        font-family: $primary-font;
+                        font-weight: 400;
+                        @include font-size(1.2rem);
+                        color: #ffffff;
+                        margin: 0;
+                        line-height: 0.9;
+                        padding:20px 0 15px 0;
+                        span{
+                            font-family: $secondary-font;
+                            font-weight: 400;
+                            @include font-size(3rem);
+                            color: #ffffff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .contact-image{
+        position: absolute;
+        left: 45%;
+        transform: translateX(-51%);
+        bottom: 0;
+        pointer-events: none;
+        .contact-img{
+            width: 799px;
         }
     }
 }
