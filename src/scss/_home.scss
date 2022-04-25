@@ -624,3 +624,69 @@
         }
     }
 }
+
+// contact us section start
+.contact-us-section{
+    .contact-us-heading{
+        font-family: $secondary-font;
+        font-weight: 400;
+        color: #1c2738;
+        @include font-size(3.1rem);
+        text-align: center;
+        margin: 0;
+    }
+    .contact-us-heading-text{
+        color: #54575b;
+        font-family: $primary-font;
+        font-weight: 500;
+        @include font-size(1.1rem);
+        text-align: center;
+        margin: 0;
+        padding-bottom: 45px;
+    }
+    .contact-us-dr{
+        .contact-us-dr-name{
+            font-family: $secondary-font;
+            font-weight: 400;
+            color: #1c2738;
+            @include font-size(1.9rem);
+            margin: 0;
+        }
+        .contact-us-dr-qualification{
+            color: $secondary-color;
+            font-family: $primary-font;
+            font-weight: 500;
+            @include font-size(1rem);
+            margin: 0;
+        }
+        .contact-us-chamber{
+            color: #1c2738;
+            font-family: $primary-font;
+            font-weight: 400;
+            @include font-size(1.2rem);
+            margin: 0;
+            line-height:initial;
+            padding: 15px 0;
+        }
+        .chamber-address{
+            color: #1c2738;
+            font-family: $primary-font;
+            font-weight: 500;
+            @include font-size(1.2rem);
+            margin: 0;
+            span{
+                color: #1c2738;
+                font-family: $primary-font;
+                font-weight: 500;
+                @include font-size(1.2rem);
+                margin: 0;  
+            }
+        }
+        .chamber-time{
+
+        }
+        .chamber-open{
+
+        }
+    }
+}
