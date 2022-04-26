@@ -1,6 +1,70 @@
 .homepage{
     background-color: #f3f4f9;
 }
+
+
+// our store section start 
+.our-store-section{
+    margin-top: 50px;
+    margin-bottom: 80px;
+    .our-store-main{
+        display: flex;
+        justify-content: center;
+        .our-store-text-image{
+            box-shadow:0 0 90px #cececf94;
+            border-radius: 15px;
+            padding: 40px 20px;
+            transition: all 0.2s ease-in-out;
+            width: 20%;
+           .store-icon-img{
+            display: flex;
+            margin: 0 auto;
+            }
+            .store-white-icon-img{
+                display: none;
+            }
+            .our-store{
+                padding-top: 20px;
+                text-align: center;
+                font-family: $primary-font;
+                font-weight: 500;
+                color: #1c2738;
+                @include font-size(1.3rem);
+                margin: 0;
+                transition: color 0.2s ease-in-out;
+            }
+            .our-store-text{
+                text-align: center;
+                font-family: $primary-font;
+                font-weight: 300;
+                color: #1c2738;
+                @include font-size(1.2rem);
+                margin: 0;
+                transition: color 0.2s ease-in-out;
+            } 
+            &:hover{
+                background-color: $primary-color;
+                transform: scale(1.1);
+                .our-store{
+                    color: #ffffff;
+                }
+                .our-store-text{
+                    color: #ffffff;
+                }
+                .store-icon-img{
+                    display: none;
+                }
+                .store-white-icon-img{
+                    display: flex;
+                    margin: 0 auto;
+                    display: block;
+                }
+            }
+        }
+        
+    }
+}
+
 // Mission Statement section start
 .mission-statement-section{
     .mission-statement-column{
