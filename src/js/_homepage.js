@@ -116,7 +116,7 @@ window.addEventListener('load',() =>{
 })
 
 if (document.querySelector('.treatment-section')) {
-    tns({
+    const slider = tns({
         container: '.treatment-section .slides',
         items: 1,
         nav: false,

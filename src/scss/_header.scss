@@ -1,6 +1,8 @@
 // header menu section start
 .header-menu-section{
+    padding-top: 30px;
     background-color: #ffffff;
+    padding-bottom: 30px;
     .main{
         .header-menu-main{
             display: flex;
@@ -90,6 +92,7 @@
                         border:1px solid #279fc1;
                         transition: all 0.3s ease-in-out;
                         text-transform: uppercase;
+                        white-space: nowrap;
                         &:hover{
                             background-color: transparent;
                             color: #279fc1;
@@ -116,9 +119,10 @@
                         border:1px solid $primary-color;
                         transition: all 0.3s ease-in-out;
                         text-transform: uppercase;
+                        white-space: nowrap;
                         &:hover{
                             background-color: transparent;
-                            color: #279fc1;
+                            color: $primary-color;
                         }
                     }
                 }  
