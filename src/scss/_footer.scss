@@ -34,12 +34,16 @@
             //     flex-direction: row;
             // }
             @media (min-width: 992px) {
+                gap: 34px;
+                flex-direction: row;
+            }
+            @media (min-width: 1400px) {
                 gap: 60px;
                 flex-direction: row;
             }
             li {
                 list-style-type: none;
-                @media (min-width:768px) {
+                @media (min-width:992px) {
                     padding: 54px 0;
                 }
                 a{
@@ -78,6 +82,10 @@
         .hr-icon {
             position: relative;
             top: 3px;
+            margin-right: 10px;
+            &:nth-child(4){
+                margin-right:0; 
+            }
             a{
                 height: 50px;
                 width: 50px;
@@ -95,6 +103,7 @@
                     transform: translate(-50%, -50%);
                 }
             }
+
         }
     }
     .copyright-text{
