@@ -174,7 +174,11 @@
 // Mission Statement section start
 .mission-statement-section{
     padding-top: 160px;
-
+    background-image: url(../images/Rounded-Rectangle-8.png);
+    background-position-x: 1300px;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-size: contain;
     .mission-statement-column{
         // padding: 0;
         .mission-statement-heading{

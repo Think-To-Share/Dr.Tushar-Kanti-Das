@@ -23,11 +23,11 @@ export class MissionCanvas {
 
     initializePixi() {
         this.app = new Application({
-            backgroundColor: 0xf3f4f9,
             width: this.canvas_width,
             height: this.canvas_height,
             antialias: true,
             resolution: 2,
+            backgroundAlpha: 0,
         })
 
         this.pixiContainerElem.appendChild(this.app.view)
