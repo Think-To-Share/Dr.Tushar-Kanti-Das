@@ -3,6 +3,7 @@ import counterUp from 'counterup2';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { TextPlugin } from "gsap/TextPlugin";
+import { MissionCanvas } from './classes/MissionCanvas';
 
 // gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
@@ -212,3 +213,5 @@ ScrollTrigger.create({
         })
     }
 });
+
+new MissionCanvas().init()

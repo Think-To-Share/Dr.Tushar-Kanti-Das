@@ -257,9 +257,10 @@
             }
         } 
     }
-    .mission-statement-img{
-        padding: 0;
-        .mission-img{
+    .mission-statement-right{
+        padding-left: 35px;
+        canvas {
+            width: 100%;
         }
     }
     
