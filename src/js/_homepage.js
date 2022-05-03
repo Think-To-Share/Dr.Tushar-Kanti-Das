@@ -157,7 +157,7 @@ window.addEventListener('load',() =>{
 
     textAnimationTl.from(".membership-image", {
         autoAlpha:0,
-        x:200,
+        y:200,
         ease: "power4.out",
         duration: 0.9,
     })
