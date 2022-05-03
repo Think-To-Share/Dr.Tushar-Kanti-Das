@@ -4,174 +4,265 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { TextPlugin } from "gsap/TextPlugin";
 import { MissionCanvas } from './classes/MissionCanvas';
+import { BannerCanvas } from './classes/BannerCanvas';
 
-// gsap.registerPlugin(ScrollTrigger, TextPlugin);
+gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
-// window.addEventListener('load',() =>{
-//     // hero section
-//     const textAnimation = gsap.timeline()
+window.addEventListener('load',() =>{
 
-//     textAnimation.from(".hero-heading", {
-//         autoAlpha:0,
-//         x:-200,
-//         duration:1,
-//         ease: "power4.out",
-//     })
+    // hero section
+    const textAnimation = gsap.timeline()
 
-//     textAnimation.from(".hero-text", {
-//         autoAlpha:0,
-//         x:-200,
-//         duration:1,
-//         ease: "power4.out",
-//     })
+    textAnimation.from(".hero-heading", {
+        autoAlpha:0,
+        x:-200,
+        duration:1,
+        ease: "power4.out",
+    })
 
-//     textAnimation.from(".hero-pointer", {
-//         autoAlpha:0,
-//         y:50,
-//         duration: 1,
-//         ease: "power4.out",
-//         stagger:0.3
-//     })
+    textAnimation.from(".hero-text", {
+        autoAlpha:0,
+        x:-200,
+        duration:1,
+        ease: "power4.out",
+    })
 
-//     textAnimation.from(".hero-btn-container", {
-//         autoAlpha:0,
-//         y:50,
-//         duration: 1,
-//         ease: "power4.out",
-//         stagger:0.3
-//     })
+    textAnimation.from(".hero-pointer", {
+        autoAlpha:0,
+        y:50,
+        duration: 1,
+        ease: "power4.out",
+        stagger:0.3
+    })
 
-//       // about us section
-//       const headingText = document.querySelector('.about-us-heading').textContent
-//       gsap.set(".about-us-heading", {text:{value:''}})
+    textAnimation.from(".hero-btn-container", {
+        autoAlpha:0,
+        y:50,
+        duration: 1,
+        ease: "power4.out",
+        stagger:0.3
+    })
+
+
+    //  Mission Statement section 
+    const textAnimationMission = gsap.timeline({
+            scrollTrigger: {
+            trigger: ".mission-statement-section",
+            start: "center center",
+        }}
+    )
+
+    textAnimationMission.from(".mission-statement-heading", {
+        autoAlpha:0,
+        x:-200,
+        duration:1,
+        ease: "power4.out",
+    })
+
+    textAnimationMission.from(".mission-statement-text", {
+        autoAlpha:0,
+        x:-200,
+        duration:1,
+        ease: "power4.out",
+    })
+    textAnimationMission.from(".mission-statement-text-second", {
+        autoAlpha:0,
+        x:-200,
+        duration:1,
+        ease: "power4.out",
+    })
+
+    textAnimationMission.from(".mission-statement-pointer", {
+        autoAlpha:0,
+        y:50,
+        duration: 1,
+        ease: "power4.out",
+        stagger:0.3
+    })
+
+    textAnimationMission.from(".mission-statement-btn-container", {
+        autoAlpha:0,
+        y:50,
+        duration: 1,
+        ease: "power4.out",
+        stagger:0.3
+    })
+
+
+    // about us section
+    const headingText = document.querySelector('.about-us-heading').textContent
+    gsap.set(".about-us-heading", {text:{value:''}})
+
+    gsap.to(".about-us-heading", {
+        scrollTrigger:{
+            trigger: ".about-us-section",
+            start: "center center",
+        },
+        duration: 5,
+        text:{
+            value:headingText,
+        }, 
+    })
   
-//       gsap.to(".about-us-heading", {
-//           scrollTrigger:{
-//               trigger: ".about-us-section",
-//           },
-//           duration: 5,
-//           text:{
-//               value:headingText,
-//           }, 
-//       })
-  
-//     gsap.from(".about-us-heading-text", {
-//         scrollTrigger:{
-//             trigger: ".about-us-section",
-//         },
-//         duration: 3,
-//         ease: "power4.out",
-//         x:-200
-//     })
+    gsap.from(".about-us-heading-text", {
+        scrollTrigger:{
+            trigger: ".about-us-section",
+            start: "center center",
+        },
+        duration: 3,
+        ease: "power4.out",
+        x:-200
+    })
 
-//     gsap.from(".about-us-text-second", {
-//         scrollTrigger:{
-//             trigger: ".about-us-section",
-//         },
-//         duration: 3,
-//         ease: "power4.out",
-//         x:-200
-//     })
+    gsap.from(".about-us-text-second", {
+        scrollTrigger:{
+            trigger: ".about-us-section",
+            start: "center center",
+        },
+        duration: 3,
+        ease: "power4.out",
+        x:-200
+    })
 
-//     gsap.from(".about-us-btn-container", {
-//         scrollTrigger:{
-//             trigger: ".about-us-section",
-//         },
-//         duration: 3,
-//         ease: "power4.out",
-//         y:200
-//     })
+    gsap.from(".about-us-btn-container", {
+        scrollTrigger:{
+            trigger: ".about-us-section",
+            start: "center center",
+        },
+        duration: 3,
+        ease: "power4.out",
+        y:200
+    })
 
-//     //membership-benefits-section
-//     const textAnimationTl = gsap.timeline({
-//         scrollTrigger: {
-//         trigger: ".membership-benefits-section",
-//         start: "center center",
-//         }})
 
-//     textAnimationTl.from(".membership-benefits-heading", {
-//         autoAlpha:0,
-//         x:-200,
-//         ease: "power4.out",
-//         duration: 0.9,
-//     })
+    //membership-benefits-section
+    const textAnimationTl = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".membership-benefits-section",
+        start: "center center",
+        }})
 
-//     textAnimationTl.from(".membership-image", {
-//         autoAlpha:0,
-//         x:200,
-//         ease: "power4.out",
-//         duration: 0.9,
-//     })
+    textAnimationTl.from(".membership-benefits-heading", {
+        autoAlpha:0,
+        x:-200,
+        ease: "power4.out",
+        duration: 0.9,
+    })
+    textAnimationTl.from(".membership-benefits-heading-text", {
+        autoAlpha:0,
+        y:-200,
+        ease: "power4.out",
+        duration: 0.9,
+    })
 
-//     textAnimationTl.from(".register-text", {
-//         y:200,
-//         autoAlpha:0,
-//         duration: 1,
-//         ease: "Power2.easeOut",
-//     })
+    textAnimationTl.from(".membership-image", {
+        autoAlpha:0,
+        x:200,
+        ease: "power4.out",
+        duration: 0.9,
+    })
 
-//     textAnimationTl.from(".pointer", {
-//         autoAlpha:0,
-//         y:50,
-//         duration: 1,
-//         ease: "power4.out",
-//         stagger:0.3
-//     })
+    textAnimationTl.from(".register-text", {
+        y:200,
+        autoAlpha:0,
+        duration: 1,
+        ease: "Power2.easeOut",
+    })
 
-//     // blog section
-//     const textAnimationT2 = gsap.timeline({
-//         scrollTrigger: {
-//           trigger: ".blog-section",
-//           start: "center center",
-//         //   toggleActions: "restart none restart none",
-//         }
-//     })
-//     textAnimationT2.from(".blog-text", {
-//         autoAlpha:0,
-//         x:-50,
-//         duration:1,
-//         ease: "power4.out",
-//         stagger:0.5
-//     })
-//     textAnimationT2.from(".blog-img-container", {
-//         autoAlpha:0,
-//         y:10,
-//         duration: 1,
-//         ease: "power4.out",
-//         stagger:0.6,
-//     },"<0.5")
+    textAnimationTl.from(".bg_icon", {
+        y:200,
+        autoAlpha:0,
+        duration: 1,
+        ease: "Power2.easeOut",
+    })
 
-//     // available-locations-section
-//     const textAnimationT3 = gsap.timeline({
-//         scrollTrigger: {
-//           trigger: ".available-locations-section",
-//         //   start: "top center",
-//         //   toggleActions: "restart none restart none",
-//         }
-//     })
+    textAnimationTl.from(".pointer", {
+        autoAlpha:0,
+        y:50,
+        duration: 1,
+        ease: "power4.out",
+        stagger:0.3
+    })
 
-//     textAnimationT3.from(".available-locations-heading", {
-//         autoAlpha:0,
-//         x:-200,
-//         duration:0.9,
-//         ease: "power4.out",
-//     })
 
-//     textAnimationT3.from(".membership-benefits-heading-text", {
-//         autoAlpha:0,
-//         x:-200,
-//         duration:2,
-//         ease: "power4.out",
-//     })
+    // blog section
+    const textAnimationT2 = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".blog-section",
+          start: "center center",
+        //   toggleActions: "restart none restart none",
+        }
+    })
+    textAnimationT2.from(".blog-heading", {
+        autoAlpha:0,
+        x:-200,
+        duration:1,
+        ease: "power4.out",
+        stagger:0.5
+    })
 
-//     textAnimationT3.from(".available-locations-text", {
-//         autoAlpha:0,
-//         y:50,
-//         duration:0.9,
-//         ease: "power4.out",
-//         stagger:0.7
-//     })
-// })
+    textAnimationT2.from(".blog-text", {
+        autoAlpha:0,
+        x:-50,
+        duration:1,
+        ease: "power4.out",
+        stagger:0.5
+    })
+    textAnimationT2.from(".blog-img-container", {
+        autoAlpha:0,
+        y:10,
+        duration: 1,
+        ease: "power4.out",
+        stagger:0.6,
+    },"<0.5")
+
+    // available-locations-section
+    const textAnimationT3 = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".available-locations-section",
+        //   start: "top center",
+        //   toggleActions: "restart none restart none",
+        }
+    })
+
+    textAnimationT3.from(".available-locations-heading", {
+        autoAlpha:0,
+        x:-200,
+        duration:0.9,
+        ease: "power4.out",
+    })
+
+    textAnimationT3.from(".available-locations-text", {
+        autoAlpha:0,
+        y:50,
+        duration:0.9,
+        ease: "power4.out",
+        stagger:0.7
+    })
+
+
+    // contact us section
+    const textAnimationContact = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".contact-us-section",
+          start: "center center",
+        }
+    })
+
+    textAnimationContact.from(".contact-us-dr", {
+        autoAlpha:0,
+        x:-200,
+        duration:0.9,
+        ease: "power4.out",
+    })
+
+    textAnimationContact.from(".contact-image-text", {
+        autoAlpha:0,
+        x:-200,
+        duration:0.9,
+        ease: "power4.out",
+    })
+})
 
 if (document.querySelector('.treatment-section')) {
     const slider = tns({
@@ -214,4 +305,8 @@ ScrollTrigger.create({
     }
 });
 
-new MissionCanvas().init()
+window.addEventListener('load',() =>{
+    new BannerCanvas().init()
+    new MissionCanvas().init()
+})
+

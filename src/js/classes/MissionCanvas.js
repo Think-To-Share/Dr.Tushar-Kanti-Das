@@ -1,5 +1,6 @@
 import {Application, Sprite, TextStyle, Text, Graphics } from 'pixi.js'
 import { DropShadowFilter } from 'pixi-filters'
+import { DisplayObject } from "@pixi/display";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { PixiPlugin } from "gsap/PixiPlugin";
@@ -7,6 +8,7 @@ import { PixiPlugin } from "gsap/PixiPlugin";
 export class MissionCanvas {
     canvas_width = 716
     canvas_height = 690
+    spriteElements = []
 
     constructor() {
         this.pixiContainerElem = document.querySelector('.mission-statement-right')
@@ -18,7 +20,7 @@ export class MissionCanvas {
         this.addMainImages();
         this.addText();
         this.addTextBkg();
-        this.loadElements();
+        this.setElementPosition();
     }
 
     initializePixi() {
@@ -36,14 +38,31 @@ export class MissionCanvas {
 
     initializeGsap() {
         gsap.registerPlugin(ScrollTrigger, PixiPlugin);
+        PixiPlugin.registerPIXI({
+            DisplayObject: DisplayObject,
+            Graphics: Graphics,
+        });
+        this.imageAnimation = gsap.timeline(
+            {
+                scrollTrigger: {
+                trigger: ".mission-statement-section",
+                start: "center center",
+            }}
+        )
     }
 
     addMainImages() {
         const img_names = ['doctor', 'prescribe', 'tablets', 'left_icon', 'right_icon'];
         img_names.forEach(img => {
-            this.app.loader.add(img, require(`../../images/mission/${img}.png`))
+            const sprite = new Sprite.from(require(`../../images/mission/${img}.png`))
+            sprite.pivot.set(0.5, 0.5)
+
+            this.app.stage.addChild(sprite)
+
+            this.spriteElements[img] = sprite;
         })
     }
+
 
     addText() {
         const headingStyle = new TextStyle({
@@ -98,46 +117,75 @@ export class MissionCanvas {
         bkg.drawRoundedRect(3, 441, 459, 242, 20)
         bkg.endFill()
         
-        const dropShadow = new DropShadowFilter();
-        dropShadow.blur = 8;
-        dropShadow.color = 0x000000;
-        dropShadow.alpha = 0.1;
-        dropShadow.distance = 0;
-        dropShadow.angle = 0;
-        dropShadow.resolution = 4;
-        bkg.filters = [dropShadow];
+        // const dropShadow = new DropShadowFilter();
+        // dropShadow.blur = 8;
+        // dropShadow.color = 0x000000;
+        // dropShadow.alpha = 0.1;
+        // dropShadow.distance = 0;
+        // dropShadow.angle = 0;
+        // dropShadow.resolution = 4;
+        // bkg.filters = [dropShadow];
 
         this.app.stage.addChild(bkg)
         bkg.zIndex = -1
     }
 
-    loadElements() {
-        this.app.loader.load((load, res) => {
-            const doctor = new Sprite(res.doctor.texture)
-            doctor.x = 3
-            doctor.y = 0
+    setElementPosition() {
+        console.log(this.spriteElements)
+        const doctor = this.spriteElements.doctor
+        doctor.x = 3
+        doctor.y = 0
 
-            const prescribe = new Sprite(res.prescribe.texture)
-            prescribe.x = 368
-            prescribe.y = 5
+        this.imageAnimation.from(doctor, {
+            pixi: {
+                scale: 0,
+                autoAlpha: 0
+            },
+            duration: 0.9,
+        })
 
-            const tablets = new Sprite(res.tablets.texture)
-            tablets.x = 484
-            tablets.y = 320
+        const prescribe = this.spriteElements.prescribe
+        prescribe.x = 368
+        prescribe.y = 5
 
-            const left_icon = new Sprite(res.left_icon.texture)
-            left_icon.x = 370
-            left_icon.y = 320
+        this.imageAnimation.from(prescribe.scale, {
+            x:0,
+            y:0,
+            ease: 'linear',
+            duration: 0.9,
+        })
 
-            const right_icon = new Sprite(res.right_icon.texture)
-            right_icon.x = 612
-            right_icon.y = 0
+        const tablets = this.spriteElements.tablets
+        tablets.x = 484
+        tablets.y = 320
 
-            this.app.stage.addChild(doctor)
-            this.app.stage.addChild(prescribe)
-            this.app.stage.addChild(tablets)
-            this.app.stage.addChild(left_icon)
-            this.app.stage.addChild(right_icon)
+        this.imageAnimation.from(tablets.scale, {
+            x:0,
+            y:0,
+            ease: 'linear',
+            duration: 0.9,
+        })
+
+        const left_icon = this.spriteElements.left_icon
+        left_icon.x = 370
+        left_icon.y = 320
+
+        this.imageAnimation.from(left_icon.scale, {
+            x:0,
+            y:0,
+            ease: 'linear',
+            duration: 0.9,
+        })
+
+        const right_icon = this.spriteElements.right_icon
+        right_icon.x = 612
+        right_icon.y = 0
+
+        this.imageAnimation.from(right_icon.scale, {
+            x:0,
+            y:0,
+            ease: 'linear',
+            duration: 0.9,
         })
     }
 }

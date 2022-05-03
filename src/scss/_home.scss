@@ -4,7 +4,10 @@
 // hero section start
 .hero-section{
     background-color: #ffffff;
-    padding-bottom: 160px;
+    padding-bottom: 60px;
+    @media (min-width: 992px){
+        padding-bottom: 230px;
+    }
 
     .hero-column{
         .hero-heading{
@@ -14,6 +17,10 @@
             font-weight: 400;
             @include font-size(3.7rem);
             margin: 0;
+            text-align: center;
+            @media (min-width: 992px){
+                text-align: left;
+            }
         }
         .hero-text{
             color: #1c2738;
@@ -23,6 +30,10 @@
             padding-top: 10px;
             padding-bottom: 15px;
             @include font-size(1.2rem);
+            text-align: center;
+            @media (min-width: 992px){
+                text-align: left;
+            }
         }
         .hero-pointer{
             font-family: $primary-font;
@@ -30,6 +41,10 @@
             color: $secondary-color;
             @include font-size(1.1rem);
             margin: 0;
+            text-align: center;
+            @media (min-width: 992px){
+                text-align: left;
+            }
             .hero-icon-box{
                 position: relative;
                 display: inline-block;
@@ -45,33 +60,44 @@
                 }
             }  
         }
-       .hero-btn-container{
-           width: 100%;
-           padding-top: 30px;
-           .hero-btn{
-            text-decoration: none;
+        .hero-btn-container{
+            width: 100%;
+            padding-top: 30px;
             text-align: center;
-            color: #ffffff;
-            background-color: $primary-color;
-            @include font-size(0.9rem);
-            padding: 12px 20px;
-            display: inline-block;
-            font-family: $primary-font;
-            font-weight: 400;
-            border-radius: 5px;
-            border:1px solid $primary-color;
-            transition: all 0.3s ease-in-out;
-            text-transform: uppercase;
-            &:hover{
-                background-color: transparent;
-                color: $primary-color;
+            @media (min-width: 992px){
+                text-align: left;
             }
-           }
-       } 
+            .hero-btn{
+                text-decoration: none;
+                text-align: center;
+                color: #ffffff;
+                background-color: $primary-color;
+                @include font-size(0.9rem);
+                padding: 12px 20px;
+                display: inline-block;
+                font-family: $primary-font;
+                font-weight: 400;
+                border-radius: 5px;
+                border:1px solid $primary-color;
+                transition: all 0.3s ease-in-out;
+                text-transform: uppercase;
+                &:hover{
+                    background-color: transparent;
+                    color: $primary-color;
+                }
+            }
+        } 
+    }
+    .banner-image-right{
+        padding-top: 30px;
+        canvas {
+            width: 100%;
+        }
     }
 }
 // our store section start 
 .our-store-section{
+    
     @media (min-width: 992px) {
         height: 0;
         width: 100%;
@@ -91,7 +117,7 @@
         justify-content: center;
         grid-template-columns: 1fr;
         row-gap: 20px;
-
+        margin-top: 20px;
         @media (min-width: 576px) {
             grid-template-columns: 1fr 1fr;
             border-radius: 15px;
@@ -102,6 +128,7 @@
 
         @media (min-width: 992px) {
             grid-template-columns: 1fr 1fr 1fr 1fr;
+            margin-top: 0;
         }
 
         .store-link{
@@ -112,13 +139,11 @@
                 background-color: #fff;
                 border-radius: 15px;
                 box-shadow:0 0 90px #cececf94;
-                
                 @media (min-width: 576px) {
                     background-color: transparent;
                     border-radius: 0;
                     box-shadow: none;
                 }
-
                .store-icon-img{
                 display: flex;
                 margin: 0 auto;
@@ -173,12 +198,23 @@
 
 // Mission Statement section start
 .mission-statement-section{
-    padding-top: 160px;
-    background-image: url(../images/Rounded-Rectangle-8.png);
-    background-position-x: 1300px;
-    background-position-y: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+    margin-top: 50px;
+    @media (min-width: 992px){
+        margin-top: 165px;
+        padding-top: 160px;
+    }
+    @media (min-width: 1200px){
+        background-image: url(../images/Rounded-Rectangle-8.png);
+        background-position-x: 100%;
+        background-position-y: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: relative;
+        z-index: -1;
+    }
+    @media (min-width: 2000px){
+        background-image: initial;
+    }
     .mission-statement-column{
         // padding: 0;
         .mission-statement-heading{
@@ -260,14 +296,68 @@
                 }
             }
         } 
+        .mission-responsive{
+            display: block;
+            margin-top: 25px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow:2px 1px 20px 6px rgb(206 206 207 / 40%);;
+            .mission-responsive-dr-name{
+                font-family: $secondary-font;
+                font-weight: 400;
+                color: $primary-color;
+                @include font-size(2rem);
+                margin: 0;
+            }
+            .mission-responsive-address{
+                font-family: $secondary-font;
+                font-weight: 400;
+                color: #696a6b;
+                @include font-size(1.5rem);
+                margin: 0;
+                padding-top: 5px;
+            }
+            .mission-responsive-about{
+                font-family: $primary-font;
+                font-weight: 400;
+                color: #696a6b;
+                @include font-size(1.3rem);
+                margin: 0;
+                padding-top: 10px;
+            }
+            @media (min-width: 992px) {
+                display: none;
+            }
+        }
     }
     .mission-statement-right{
-        padding-left: 35px;
+        margin-top: 20px;
+        padding-left: 0;
+        display: none;
         canvas {
             width: 100%;
         }
+        @media (min-width: 992px){
+            display: block;
+        }
+        @media (min-width: 1200px){
+            padding-left: 35px;
+        }
     }
-    
+    .mission-bg-icon-image-container{
+        position: absolute;
+        right: 4%;
+        top: 64%;
+        z-index: -1;
+        display: none;
+        .mission-bg-icon{
+
+        }
+        @media (min-width: 1200px) {
+            display: block;
+        }
+    }
 }
 
 // Treatment section start
@@ -617,6 +707,10 @@
                             width: 12px;
                             fill: #fff;
                         }
+                        &:hover{
+                            background-color: transparent;
+                            color: #fff;
+                        }
                     }
                 }
             }
@@ -654,6 +748,10 @@
                             height: 12px;
                             width: 12px;
                             fill: #fff;
+                        }
+                        &:hover{
+                            background-color: transparent;
+                            color: #fff;
                         }
                     }
                 }   
