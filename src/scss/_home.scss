@@ -981,6 +981,10 @@
             @include font-size(1.1rem);
             margin: 0;
         }
+        display: none;
+        @media (min-width:992px){
+            display: block;
+        }
     }
     .about-container{
         display: flex;
@@ -1080,6 +1084,51 @@
             }
             @media (min-width:992px){
                 display: block;
+            }
+        }
+    }
+    .slider-container{
+        display: block;
+        @media (min-width:992px){
+            display: none;
+        }
+        .slides{
+            .slide{
+               .about-box-responsive{
+                    border-radius: 10px;
+                    padding: 30px;
+                    background: #fff;
+                    .about-name-img-main {
+                        display: flex;
+                        align-items: center;
+                        .about-img{
+                            .about-image{
+                                border-radius: 100%;
+                            }
+                        }
+                        .about-name-text{
+                            margin: 0;
+                            font-family: $primary-font;
+                            font-weight: 600;
+                            color: $secondary-color;
+                            @include font-size(1rem);
+                            line-height: initial;
+                            text-transform: uppercase;
+                            padding-left: 14px;
+                            span{
+                                font-weight: 400;
+                                color: #868889;
+                            }
+                        }
+                    }
+                    .about-us-text{
+                        font-family: $primary-font;
+                        font-weight: 400;
+                        color: #828282;
+                        @include font-size(1.1rem);
+                        margin: 0;
+                    }
+                }  
             }
         }
     }
@@ -1317,6 +1366,16 @@
                             color: #eef4f7;
                         }
                     }
+                    // .date-text{
+                    //     display: block;
+                    //     color: #fff;
+                    //     @include font-size(0.9rem);
+                    //     font-family: $primary-font;
+                    //     font-weight: 400;
+                    //     @media (min-width:768px) {
+                    //         display: none;
+                    //     }
+                    // }
                     .btn-container{
                         margin-top: 25px;
                         .btn-submit{
@@ -1386,7 +1445,7 @@
                                     br.responsive {
                                       display: none; 
                                     }
-                                  }
+                                }
                             }
                         }
                     }

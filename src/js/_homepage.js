@@ -219,7 +219,7 @@ window.addEventListener('load',() =>{
 
    textAnimationContact.from(".contact-image-text", {
        autoAlpha:0,
-       x:-200,
+       y:200,
        duration:0.5,
        ease: "power4.out",
    })
@@ -260,15 +260,43 @@ window.addEventListener('load',() =>{
             }
         })
 
-        textAnimationAboutus.from(".about-us-left", {
+        textAnimationAboutus.from(".testimonial-first", {
+            x:-50,
+            autoAlpha:0,
+            duration: 0.5,
+            ease: "power4.out",
+        })
+
+        textAnimationAboutus.from(".testimonial-second", {
+            y:-50,
+            autoAlpha:0,
+            duration: 0.5,
+            ease: "power4.out",
+        })
+
+        textAnimationAboutus.from(".testimonial-third", {
+            y:50,
+            autoAlpha:0,
+            duration: 0.5,
+            ease: "power4.out",
+        })
+
+        textAnimationAboutus.from(".image-container", {
+            y:50,
+            autoAlpha:0,
+            duration: 0.7,
+            ease: "power4.out",
+        })
+
+        textAnimationAboutus.from(".right-image-container", {
             x:-50,
             autoAlpha:0,
             duration: 0.7,
             ease: "power4.out",
         })
 
-        textAnimationAboutus.from(".about-us-right", {
-            y:-50,
+        textAnimationAboutus.from(".right-second-image-container", {
+            y:50,
             autoAlpha:0,
             duration: 0.7,
             ease: "power4.out",
@@ -277,7 +305,7 @@ window.addEventListener('load',() =>{
         textAnimationAboutus.from(".about-us-heading-text", {
             x:-50,
             autoAlpha:0,
-            duration: 0.7,
+            duration: 0.5,
              ease: "power4.out",
         })
   
@@ -324,6 +352,21 @@ if (document.querySelector('.treatment-section')) {
         }
     })
 }
+
+// about-us-section
+if (document.querySelector('.about-us-section')) {
+    const slider = tns({
+        container: '.about-us-section .slides',
+        items: 1,
+        nav: false,
+        autoplay: true,
+        controls:false,
+        autoplayTimeout:3000,
+        autoplayButtonOutput: false,
+    })
+}
+
+
 // counter section
 ScrollTrigger.create({
     trigger: ".counter-section",
