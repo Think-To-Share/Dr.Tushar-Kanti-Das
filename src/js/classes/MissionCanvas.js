@@ -46,7 +46,7 @@ export class MissionCanvas {
             {
                 scrollTrigger: {
                 trigger: ".mission-statement-section",
-                start: "center center",
+                start: "top center",
             }}
         )
     }
@@ -141,29 +141,27 @@ export class MissionCanvas {
                 scale: 0,
                 autoAlpha: 0
             },
-            duration: 0.9,
+            duration: 0.5,
         })
 
         const prescribe = this.spriteElements.prescribe
         prescribe.x = 368
         prescribe.y = 5
 
-        this.imageAnimation.from(prescribe.scale, {
-            x:0,
-            y:0,
-            ease: 'linear',
-            duration: 0.9,
+        this.imageAnimation.from(prescribe, {
+            y:-700,
+            ease: "power4.out",
+            duration: 0.5,
         })
 
         const tablets = this.spriteElements.tablets
         tablets.x = 484
         tablets.y = 320
 
-        this.imageAnimation.from(tablets.scale, {
-            x:0,
-            y:0,
-            ease: 'linear',
-            duration: 0.9,
+        this.imageAnimation.from(tablets, {
+            x:850,
+            ease: "power4.out",
+            duration: 0.5,
         })
 
         const left_icon = this.spriteElements.left_icon
@@ -174,7 +172,7 @@ export class MissionCanvas {
             x:0,
             y:0,
             ease: 'linear',
-            duration: 0.9,
+            duration: 0.5,
         })
 
         const right_icon = this.spriteElements.right_icon
@@ -185,7 +183,7 @@ export class MissionCanvas {
             x:0,
             y:0,
             ease: 'linear',
-            duration: 0.9,
+            duration: 0.5,
         })
     }
 }

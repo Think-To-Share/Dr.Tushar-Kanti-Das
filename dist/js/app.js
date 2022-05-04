@@ -64538,26 +64538,26 @@ window.addEventListener("load", function() {
     textAnimation.from(".hero-heading", {
         autoAlpha: 0,
         x: -200,
-        duration: 1,
+        duration: 0.5,
         ease: "power4.out"
     });
     textAnimation.from(".hero-text", {
         autoAlpha: 0,
         x: -200,
-        duration: 1,
+        duration: 0.5,
         ease: "power4.out"
     });
     textAnimation.from(".hero-pointer", {
         autoAlpha: 0,
         y: 50,
-        duration: 1,
+        duration: 0.5,
         ease: "power4.out",
         stagger: 0.3
     });
     textAnimation.from(".hero-btn-container", {
         autoAlpha: 0,
         y: 50,
-        duration: 1,
+        duration: 0.5,
         ease: "power4.out",
         stagger: 0.3
     });
@@ -64565,38 +64565,38 @@ window.addEventListener("load", function() {
     var textAnimationMission = gsap__WEBPACK_IMPORTED_MODULE_4__.gsap.timeline({
         scrollTrigger: {
             trigger: ".mission-statement-section",
-            start: "center center"
+            start: "top center"
         }
     });
     textAnimationMission.from(".mission-statement-heading", {
         autoAlpha: 0,
         x: -200,
-        duration: 1,
+        duration: 0.5,
         ease: "power4.out"
     });
     textAnimationMission.from(".mission-statement-text", {
         autoAlpha: 0,
         x: -200,
-        duration: 1,
+        duration: 0.5,
         ease: "power4.out"
     });
     textAnimationMission.from(".mission-statement-text-second", {
         autoAlpha: 0,
         x: -200,
-        duration: 1,
+        duration: 0.5,
         ease: "power4.out"
     });
     textAnimationMission.from(".mission-statement-pointer", {
         autoAlpha: 0,
         y: 50,
-        duration: 1,
+        duration: 0.5,
         ease: "power4.out",
         stagger: 0.3
     });
     textAnimationMission.from(".mission-statement-btn-container", {
         autoAlpha: 0,
         y: 50,
-        duration: 1,
+        duration: 0.5,
         ease: "power4.out",
         stagger: 0.3
     });
@@ -64610,9 +64610,9 @@ window.addEventListener("load", function() {
     gsap__WEBPACK_IMPORTED_MODULE_4__.gsap.to(".about-us-heading", {
         scrollTrigger: {
             trigger: ".about-us-section",
-            start: "center center"
+            start: "top center"
         },
-        duration: 5,
+        duration: 2,
         text: {
             value: headingText
         }
@@ -64620,27 +64620,27 @@ window.addEventListener("load", function() {
     gsap__WEBPACK_IMPORTED_MODULE_4__.gsap.from(".about-us-heading-text", {
         scrollTrigger: {
             trigger: ".about-us-section",
-            start: "center center"
+            start: "top center"
         },
-        duration: 3,
+        duration: 0.5,
         ease: "power4.out",
-        x: -200
+        x: -50
     });
     gsap__WEBPACK_IMPORTED_MODULE_4__.gsap.from(".about-us-text-second", {
         scrollTrigger: {
             trigger: ".about-us-section",
-            start: "center center"
+            start: "top center"
         },
-        duration: 3,
+        duration: 0.5,
         ease: "power4.out",
-        x: -200
+        x: -50
     });
     gsap__WEBPACK_IMPORTED_MODULE_4__.gsap.from(".about-us-btn-container", {
         scrollTrigger: {
             trigger: ".about-us-section",
-            start: "center center"
+            start: "top center"
         },
-        duration: 3,
+        duration: 0.5,
         ease: "power4.out",
         y: 200
     });
@@ -64648,71 +64648,71 @@ window.addEventListener("load", function() {
     var textAnimationTl = gsap__WEBPACK_IMPORTED_MODULE_4__.gsap.timeline({
         scrollTrigger: {
             trigger: ".membership-benefits-section",
-            start: "center center"
+            start: "top center"
         }
     });
     textAnimationTl.from(".membership-benefits-heading", {
         autoAlpha: 0,
         x: -200,
         ease: "power4.out",
-        duration: 0.9
-    });
-    textAnimationTl.from(".membership-benefits-heading-text", {
-        autoAlpha: 0,
-        y: -200,
-        ease: "power4.out",
-        duration: 0.9
+        duration: 0.5
     });
     textAnimationTl.from(".membership-image", {
         autoAlpha: 0,
         y: 200,
         ease: "power4.out",
-        duration: 0.9
+        duration: 0.5
     });
-    textAnimationTl.from(".register-text", {
-        y: 200,
+    textAnimationTl.from(".membership-benefits-heading-text", {
         autoAlpha: 0,
-        duration: 1,
-        ease: "Power2.easeOut"
-    });
-    textAnimationTl.from(".bg_icon", {
-        y: 200,
-        autoAlpha: 0,
-        duration: 1,
-        ease: "Power2.easeOut"
+        y: -200,
+        ease: "power4.out",
+        duration: 0.5
     });
     textAnimationTl.from(".pointer", {
         autoAlpha: 0,
         y: 50,
-        duration: 1,
+        duration: 0.5,
         ease: "power4.out",
         stagger: 0.3
+    });
+    textAnimationTl.from(".bg_icon", {
+        y: 200,
+        autoAlpha: 0,
+        duration: 0.5,
+        ease: "Power2.easeOut"
+    });
+    textAnimationTl.from(".register-text", {
+        y: 200,
+        autoAlpha: 0,
+        duration: 0.5,
+        ease: "Power2.easeOut"
     });
     // blog section
     var textAnimationT2 = gsap__WEBPACK_IMPORTED_MODULE_4__.gsap.timeline({
         scrollTrigger: {
             trigger: ".blog-section",
-            start: "center center"
+            start: "top center"
         }
     });
     textAnimationT2.from(".blog-heading", {
         autoAlpha: 0,
         x: -200,
-        duration: 1,
+        duration: 0.5,
         ease: "power4.out",
         stagger: 0.5
     });
     textAnimationT2.from(".blog-text", {
         autoAlpha: 0,
         x: -50,
-        duration: 1,
+        duration: 0.5,
         ease: "power4.out",
         stagger: 0.5
     });
     textAnimationT2.from(".blog-img-container", {
         autoAlpha: 0,
         y: 10,
-        duration: 1,
+        duration: 0.5,
         ease: "power4.out",
         stagger: 0.6
     }, "<0.5");
@@ -64725,13 +64725,13 @@ window.addEventListener("load", function() {
     textAnimationT3.from(".available-locations-heading", {
         autoAlpha: 0,
         x: -200,
-        duration: 0.9,
+        duration: 0.5,
         ease: "power4.out"
     });
     textAnimationT3.from(".available-locations-text", {
         autoAlpha: 0,
         y: 50,
-        duration: 0.9,
+        duration: 0.5,
         ease: "power4.out",
         stagger: 0.7
     });
@@ -64739,19 +64739,25 @@ window.addEventListener("load", function() {
     var textAnimationContact = gsap__WEBPACK_IMPORTED_MODULE_4__.gsap.timeline({
         scrollTrigger: {
             trigger: ".contact-us-section",
-            start: "center center"
+            start: "top center"
         }
     });
     textAnimationContact.from(".contact-us-dr", {
         autoAlpha: 0,
         x: -200,
-        duration: 0.9,
+        duration: 0.5,
         ease: "power4.out"
+    });
+    textAnimationContact.from(".contact-image", {
+        autoAlpha: 0,
+        y: -500,
+        ease: "Bounce.easeOut",
+        duration: 2
     });
     textAnimationContact.from(".contact-image-text", {
         autoAlpha: 0,
         x: -200,
-        duration: 0.9,
+        duration: 0.5,
         ease: "power4.out"
     });
 });
@@ -64926,15 +64932,15 @@ var BannerCanvas = /*#__PURE__*/ function() {
                     imageAnimation.from(doctor.scale, {
                         x: 0,
                         y: 0,
-                        duration: 0.9
+                        duration: 0.5
                     });
                     var saline = new pixi_js__WEBPACK_IMPORTED_MODULE_0__.Sprite(res.saline_water.texture);
                     saline.x = 353;
                     saline.y = 0;
-                    imageAnimation.from(saline.scale, {
-                        x: 0,
-                        y: 0,
-                        duration: 0.9
+                    imageAnimation.from(saline, {
+                        y: -200,
+                        ease: "power4.out",
+                        duration: 0.5
                     });
                     var checkup = new pixi_js__WEBPACK_IMPORTED_MODULE_0__.Sprite(res.check_up_doctor.texture);
                     checkup.x = 353;
@@ -64942,23 +64948,23 @@ var BannerCanvas = /*#__PURE__*/ function() {
                     imageAnimation.from(checkup.scale, {
                         x: 0,
                         y: 0,
-                        duration: 0.9
+                        duration: 0.5
                     });
                     var stethoscope = new pixi_js__WEBPACK_IMPORTED_MODULE_0__.Sprite(res.stethoscope.texture);
                     stethoscope.x = 585;
                     stethoscope.y = 230;
-                    imageAnimation.from(stethoscope.scale, {
-                        x: 0,
-                        y: 0,
-                        duration: 0.9
+                    imageAnimation.from(stethoscope, {
+                        y: -200,
+                        ease: "power4.out",
+                        duration: 0.5
                     });
                     var injection = new pixi_js__WEBPACK_IMPORTED_MODULE_0__.Sprite(res.injection.texture);
                     injection.x = 3;
                     injection.y = 350;
-                    imageAnimation.from(injection.scale, {
-                        x: 0,
-                        y: 0,
-                        duration: 0.9
+                    imageAnimation.from(injection, {
+                        x: -200,
+                        ease: "power4.out",
+                        duration: 0.5
                     });
                     var testing = new pixi_js__WEBPACK_IMPORTED_MODULE_0__.Sprite(res.testing.texture);
                     testing.x = 120;
@@ -64966,7 +64972,7 @@ var BannerCanvas = /*#__PURE__*/ function() {
                     imageAnimation.from(testing.scale, {
                         x: 0,
                         y: 0,
-                        duration: 0.9
+                        duration: 0.5
                     });
                     var doctorplus = new pixi_js__WEBPACK_IMPORTED_MODULE_0__.Sprite(res.doctor_plus.texture);
                     doctorplus.x = 353;
@@ -64974,15 +64980,15 @@ var BannerCanvas = /*#__PURE__*/ function() {
                     imageAnimation.from(doctorplus.scale, {
                         x: 0,
                         y: 0,
-                        duration: 0.9
+                        duration: 0.5
                     });
                     var tablet = new pixi_js__WEBPACK_IMPORTED_MODULE_0__.Sprite(res.tablet.texture);
                     tablet.x = 470;
                     tablet.y = 350;
-                    imageAnimation.from(tablet.scale, {
-                        x: 0,
-                        y: 0,
-                        duration: 0.9
+                    imageAnimation.from(tablet, {
+                        x: 850,
+                        ease: "power4.out",
+                        duration: 0.5
                     });
                     var blueicon = new pixi_js__WEBPACK_IMPORTED_MODULE_0__.Sprite(res.banner_icon_blue.texture);
                     blueicon.x = 2;
@@ -64990,7 +64996,7 @@ var BannerCanvas = /*#__PURE__*/ function() {
                     imageAnimation.from(blueicon.scale, {
                         x: 0,
                         y: 0,
-                        duration: 0.9
+                        duration: 0.5
                     });
                     var yellowicon = new pixi_js__WEBPACK_IMPORTED_MODULE_0__.Sprite(res.banner_icon_yellow.texture);
                     yellowicon.x = 465;
@@ -64998,7 +65004,7 @@ var BannerCanvas = /*#__PURE__*/ function() {
                     imageAnimation.from(yellowicon.scale, {
                         x: 0,
                         y: 0,
-                        duration: 0.9
+                        duration: 0.5
                     });
                     var greenicon = new pixi_js__WEBPACK_IMPORTED_MODULE_0__.Sprite(res.banner_icon_green.texture);
                     greenicon.x = 585;
@@ -65006,7 +65012,7 @@ var BannerCanvas = /*#__PURE__*/ function() {
                     imageAnimation.from(greenicon.scale, {
                         x: 0,
                         y: 0,
-                        duration: 0.9
+                        duration: 0.5
                     });
                     var bluecircleicon = new pixi_js__WEBPACK_IMPORTED_MODULE_0__.Sprite(res.banner_icon_circle_blue.texture);
                     bluecircleicon.x = 695;
@@ -65014,7 +65020,7 @@ var BannerCanvas = /*#__PURE__*/ function() {
                     imageAnimation.from(bluecircleicon.scale, {
                         x: 0,
                         y: 0,
-                        duration: 0.9
+                        duration: 0.5
                     });
                     _this.app.stage.addChild(doctor);
                     _this.app.stage.addChild(saline);
@@ -65136,7 +65142,7 @@ var MissionCanvas = /*#__PURE__*/ function() {
                 this.imageAnimation = gsap__WEBPACK_IMPORTED_MODULE_3__.gsap.timeline({
                     scrollTrigger: {
                         trigger: ".mission-statement-section",
-                        start: "center center"
+                        start: "top center"
                     }
                 });
             }
@@ -65235,25 +65241,23 @@ var MissionCanvas = /*#__PURE__*/ function() {
                         scale: 0,
                         autoAlpha: 0
                     },
-                    duration: 0.9
+                    duration: 0.5
                 });
                 var prescribe = this.spriteElements.prescribe;
                 prescribe.x = 368;
                 prescribe.y = 5;
-                this.imageAnimation.from(prescribe.scale, {
-                    x: 0,
-                    y: 0,
-                    ease: "linear",
-                    duration: 0.9
+                this.imageAnimation.from(prescribe, {
+                    y: -700,
+                    ease: "power4.out",
+                    duration: 0.5
                 });
                 var tablets = this.spriteElements.tablets;
                 tablets.x = 484;
                 tablets.y = 320;
-                this.imageAnimation.from(tablets.scale, {
-                    x: 0,
-                    y: 0,
-                    ease: "linear",
-                    duration: 0.9
+                this.imageAnimation.from(tablets, {
+                    x: 850,
+                    ease: "power4.out",
+                    duration: 0.5
                 });
                 var left_icon = this.spriteElements.left_icon;
                 left_icon.x = 370;
@@ -65262,7 +65266,7 @@ var MissionCanvas = /*#__PURE__*/ function() {
                     x: 0,
                     y: 0,
                     ease: "linear",
-                    duration: 0.9
+                    duration: 0.5
                 });
                 var right_icon = this.spriteElements.right_icon;
                 right_icon.x = 612;
@@ -65271,7 +65275,7 @@ var MissionCanvas = /*#__PURE__*/ function() {
                     x: 0,
                     y: 0,
                     ease: "linear",
-                    duration: 0.9
+                    duration: 0.5
                 });
             }
         }

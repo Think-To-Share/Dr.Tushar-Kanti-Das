@@ -16,21 +16,21 @@ window.addEventListener('load',() =>{
     textAnimation.from(".hero-heading", {
         autoAlpha:0,
         x:-200,
-        duration:1,
+        duration:0.5,
         ease: "power4.out",
     })
 
     textAnimation.from(".hero-text", {
         autoAlpha:0,
         x:-200,
-        duration:1,
+        duration:0.5,
         ease: "power4.out",
     })
 
     textAnimation.from(".hero-pointer", {
         autoAlpha:0,
         y:50,
-        duration: 1,
+        duration: 0.5,
         ease: "power4.out",
         stagger:0.3
     })
@@ -38,7 +38,7 @@ window.addEventListener('load',() =>{
     textAnimation.from(".hero-btn-container", {
         autoAlpha:0,
         y:50,
-        duration: 1,
+        duration: 0.5,
         ease: "power4.out",
         stagger:0.3
     })
@@ -48,34 +48,34 @@ window.addEventListener('load',() =>{
     const textAnimationMission = gsap.timeline({
             scrollTrigger: {
             trigger: ".mission-statement-section",
-            start: "center center",
+            start: "top center",
         }}
     )
 
     textAnimationMission.from(".mission-statement-heading", {
         autoAlpha:0,
         x:-200,
-        duration:1,
+        duration:0.5,
         ease: "power4.out",
     })
 
     textAnimationMission.from(".mission-statement-text", {
         autoAlpha:0,
         x:-200,
-        duration:1,
+        duration:0.5,
         ease: "power4.out",
     })
     textAnimationMission.from(".mission-statement-text-second", {
         autoAlpha:0,
         x:-200,
-        duration:1,
+        duration:0.5,
         ease: "power4.out",
     })
 
     textAnimationMission.from(".mission-statement-pointer", {
         autoAlpha:0,
         y:50,
-        duration: 1,
+        duration: 0.5,
         ease: "power4.out",
         stagger:0.3
     })
@@ -83,7 +83,7 @@ window.addEventListener('load',() =>{
     textAnimationMission.from(".mission-statement-btn-container", {
         autoAlpha:0,
         y:50,
-        duration: 1,
+        duration: 0.5,
         ease: "power4.out",
         stagger:0.3
     })
@@ -96,9 +96,9 @@ window.addEventListener('load',() =>{
     gsap.to(".about-us-heading", {
         scrollTrigger:{
             trigger: ".about-us-section",
-            start: "center center",
+            start: "top center",
         },
-        duration: 5,
+        duration: 2,
         text:{
             value:headingText,
         }, 
@@ -107,29 +107,29 @@ window.addEventListener('load',() =>{
     gsap.from(".about-us-heading-text", {
         scrollTrigger:{
             trigger: ".about-us-section",
-            start: "center center",
+            start: "top center",
         },
-        duration: 3,
+        duration: 0.5,
         ease: "power4.out",
-        x:-200
+        x:-50
     })
 
     gsap.from(".about-us-text-second", {
         scrollTrigger:{
             trigger: ".about-us-section",
-            start: "center center",
+            start: "top center",
         },
-        duration: 3,
+        duration: 0.5,
         ease: "power4.out",
-        x:-200
+        x:-50
     })
 
     gsap.from(".about-us-btn-container", {
         scrollTrigger:{
             trigger: ".about-us-section",
-            start: "center center",
+            start: "top center",
         },
-        duration: 3,
+        duration: 0.5,
         ease: "power4.out",
         y:200
     })
@@ -139,49 +139,50 @@ window.addEventListener('load',() =>{
     const textAnimationTl = gsap.timeline({
         scrollTrigger: {
             trigger: ".membership-benefits-section",
-        start: "center center",
+            start: "top center",
         }})
 
     textAnimationTl.from(".membership-benefits-heading", {
         autoAlpha:0,
         x:-200,
         ease: "power4.out",
-        duration: 0.9,
-    })
-    textAnimationTl.from(".membership-benefits-heading-text", {
-        autoAlpha:0,
-        y:-200,
-        ease: "power4.out",
-        duration: 0.9,
+        duration: 0.5,
     })
 
     textAnimationTl.from(".membership-image", {
         autoAlpha:0,
         y:200,
         ease: "power4.out",
-        duration: 0.9,
+        duration: 0.5,
     })
 
-    textAnimationTl.from(".register-text", {
-        y:200,
+    textAnimationTl.from(".membership-benefits-heading-text", {
         autoAlpha:0,
-        duration: 1,
-        ease: "Power2.easeOut",
-    })
-
-    textAnimationTl.from(".bg_icon", {
-        y:200,
-        autoAlpha:0,
-        duration: 1,
-        ease: "Power2.easeOut",
+        y:-200,
+        ease: "power4.out",
+        duration: 0.5,
     })
 
     textAnimationTl.from(".pointer", {
         autoAlpha:0,
         y:50,
-        duration: 1,
+        duration: 0.5,
         ease: "power4.out",
         stagger:0.3
+    })
+
+    textAnimationTl.from(".bg_icon", {
+        y:200,
+        autoAlpha:0,
+        duration: 0.5,
+        ease: "Power2.easeOut",
+    })
+
+    textAnimationTl.from(".register-text", {
+        y:200,
+        autoAlpha:0,
+        duration: 0.5,
+        ease: "Power2.easeOut",
     })
 
 
@@ -189,14 +190,14 @@ window.addEventListener('load',() =>{
     const textAnimationT2 = gsap.timeline({
         scrollTrigger: {
           trigger: ".blog-section",
-          start: "center center",
+          start: "top center",
         //   toggleActions: "restart none restart none",
         }
     })
     textAnimationT2.from(".blog-heading", {
         autoAlpha:0,
         x:-200,
-        duration:1,
+        duration:0.5,
         ease: "power4.out",
         stagger:0.5
     })
@@ -204,14 +205,14 @@ window.addEventListener('load',() =>{
     textAnimationT2.from(".blog-text", {
         autoAlpha:0,
         x:-50,
-        duration:1,
+        duration:0.5,
         ease: "power4.out",
         stagger:0.5
     })
     textAnimationT2.from(".blog-img-container", {
         autoAlpha:0,
         y:10,
-        duration: 1,
+        duration: 0.5,
         ease: "power4.out",
         stagger:0.6,
     },"<0.5")
@@ -228,14 +229,14 @@ window.addEventListener('load',() =>{
     textAnimationT3.from(".available-locations-heading", {
         autoAlpha:0,
         x:-200,
-        duration:0.9,
+        duration:0.5,
         ease: "power4.out",
     })
 
     textAnimationT3.from(".available-locations-text", {
         autoAlpha:0,
         y:50,
-        duration:0.9,
+        duration:0.5,
         ease: "power4.out",
         stagger:0.7
     })
@@ -245,21 +246,28 @@ window.addEventListener('load',() =>{
     const textAnimationContact = gsap.timeline({
         scrollTrigger: {
           trigger: ".contact-us-section",
-          start: "center center",
+          start: "top center",
         }
     })
 
     textAnimationContact.from(".contact-us-dr", {
         autoAlpha:0,
         x:-200,
-        duration:0.9,
+        duration:0.5,
         ease: "power4.out",
+    })
+
+    textAnimationContact.from(".contact-image", {
+        autoAlpha:0,
+        y:-500,
+        ease:"Bounce.easeOut",
+        duration:2,
     })
 
     textAnimationContact.from(".contact-image-text", {
         autoAlpha:0,
         x:-200,
-        duration:0.9,
+        duration:0.5,
         ease: "power4.out",
     })
 })
