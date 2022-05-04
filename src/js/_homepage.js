@@ -10,266 +10,290 @@ gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
 window.addEventListener('load',() =>{
 
-    // hero section
-    const textAnimation = gsap.timeline()
+   // hero section
+   const textAnimation = gsap.timeline()
 
-    textAnimation.from(".hero-heading", {
-        autoAlpha:0,
-        x:-200,
-        duration:0.5,
-        ease: "power4.out",
-    })
+   textAnimation.from(".hero-heading", {
+       autoAlpha:0,
+       x:-200,
+       duration:0.5,
+       ease: "power4.out",
+   })
 
-    textAnimation.from(".hero-text", {
-        autoAlpha:0,
-        x:-200,
-        duration:0.5,
-        ease: "power4.out",
-    })
+   textAnimation.from(".hero-text", {
+       autoAlpha:0,
+       x:-200,
+       duration:0.5,
+       ease: "power4.out",
+   })
 
-    textAnimation.from(".hero-pointer", {
-        autoAlpha:0,
-        y:50,
-        duration: 0.5,
-        ease: "power4.out",
-        stagger:0.3
-    })
+   textAnimation.from(".hero-pointer", {
+       autoAlpha:0,
+       y:50,
+       duration: 0.5,
+       ease: "power4.out",
+       stagger:0.3
+   })
 
-    textAnimation.from(".hero-btn-container", {
-        autoAlpha:0,
-        y:50,
-        duration: 0.5,
-        ease: "power4.out",
-        stagger:0.3
-    })
-
-
-    //  Mission Statement section 
-    const textAnimationMission = gsap.timeline({
-            scrollTrigger: {
-            trigger: ".mission-statement-section",
-            start: "top center",
-        }}
-    )
-
-    textAnimationMission.from(".mission-statement-heading", {
-        autoAlpha:0,
-        x:-200,
-        duration:0.5,
-        ease: "power4.out",
-    })
-
-    textAnimationMission.from(".mission-statement-text", {
-        autoAlpha:0,
-        x:-200,
-        duration:0.5,
-        ease: "power4.out",
-    })
-    textAnimationMission.from(".mission-statement-text-second", {
-        autoAlpha:0,
-        x:-200,
-        duration:0.5,
-        ease: "power4.out",
-    })
-
-    textAnimationMission.from(".mission-statement-pointer", {
-        autoAlpha:0,
-        y:50,
-        duration: 0.5,
-        ease: "power4.out",
-        stagger:0.3
-    })
-
-    textAnimationMission.from(".mission-statement-btn-container", {
-        autoAlpha:0,
-        y:50,
-        duration: 0.5,
-        ease: "power4.out",
-        stagger:0.3
-    })
+   textAnimation.from(".hero-btn-container", {
+       autoAlpha:0,
+       y:50,
+       duration: 0.5,
+       ease: "power4.out",
+       stagger:0.3
+   })
 
 
-    // about us section
-    const headingText = document.querySelector('.about-us-heading').textContent
-    gsap.set(".about-us-heading", {text:{value:''}})
+   //  Mission Statement section 
+   const textAnimationMission = gsap.timeline({
+           scrollTrigger: {
+           trigger: ".mission-statement-section",
+           start: "top center",
+       }}
+   )
 
-    gsap.to(".about-us-heading", {
-        scrollTrigger:{
-            trigger: ".about-us-section",
-            start: "top center",
-        },
-        duration: 2,
-        text:{
-            value:headingText,
-        }, 
-    })
+   textAnimationMission.from(".mission-statement-heading", {
+       autoAlpha:0,
+       x:-200,
+       duration:0.5,
+       ease: "power4.out",
+   })
+
+   textAnimationMission.from(".mission-statement-text", {
+       autoAlpha:0,
+       x:-200,
+       duration:0.5,
+       ease: "power4.out",
+   })
+   textAnimationMission.from(".mission-statement-text-second", {
+       autoAlpha:0,
+       x:-200,
+       duration:0.5,
+       ease: "power4.out",
+   })
+
+   textAnimationMission.from(".mission-statement-pointer", {
+       autoAlpha:0,
+       y:50,
+       duration: 0.5,
+       ease: "power4.out",
+       stagger:0.3
+   })
+
+   textAnimationMission.from(".mission-statement-btn-container", {
+       autoAlpha:0,
+       y:50,
+       duration: 0.5,
+       ease: "power4.out",
+       stagger:0.3
+   })
+
+
+   //membership-benefits-section
+   const textAnimationTl = gsap.timeline({
+       scrollTrigger: {
+           trigger: ".membership-benefits-section",
+           start: "top center",
+       }})
+
+   textAnimationTl.from(".membership-benefits-heading", {
+       autoAlpha:0,
+       x:-200,
+       ease: "power4.out",
+       duration: 0.5,
+   })
+
+   textAnimationTl.from(".membership-image", {
+       autoAlpha:0,
+       y:200,
+       ease: "power4.out",
+       duration: 0.5,
+   })
+
+   textAnimationTl.from(".membership-benefits-heading-text", {
+       autoAlpha:0,
+       y:-200,
+       ease: "power4.out",
+       duration: 0.5,
+   })
+
+   textAnimationTl.from(".pointer", {
+       autoAlpha:0,
+       y:50,
+       duration: 0.5,
+       ease: "power4.out",
+       stagger:0.3
+   })
+
+   textAnimationTl.from(".bg_icon", {
+       y:200,
+       autoAlpha:0,
+       duration: 0.5,
+       ease: "Power2.easeOut",
+   })
+
+   textAnimationTl.from(".register-text", {
+       y:200,
+       autoAlpha:0,
+       duration: 0.5,
+       ease: "Power2.easeOut",
+   })
+
+
+   // blog section
+   const textAnimationT2 = gsap.timeline({
+       scrollTrigger: {
+         trigger: ".blog-section",
+         start: "top center",
+       }
+   })
+   textAnimationT2.from(".blog-heading", {
+       autoAlpha:0,
+       x:-200,
+       duration:0.5,
+       ease: "power4.out",
+       stagger:0.5
+   })
+
+   textAnimationT2.from(".blog-text", {
+       autoAlpha:0,
+       x:-50,
+       duration:0.5,
+       ease: "power4.out",
+       stagger:0.5
+   })
+   textAnimationT2.from(".blog-img-container", {
+       autoAlpha:0,
+       y:10,
+       duration: 0.5,
+       ease: "power4.out",
+       stagger:0.6,
+   },"<0.5")
+
+
+   // available-locations-section
+   const textAnimationT3 = gsap.timeline({
+       scrollTrigger: {
+         trigger: ".available-locations-section",
+         start: "top center",
+       }
+   })
+
+   textAnimationT3.from(".available-locations-heading", {
+       autoAlpha:0,
+       x:-200,
+       duration:0.5,
+       ease: "power4.out",
+   })
+
+   textAnimationT3.from(".available-locations-text", {
+       autoAlpha:0,
+       y:50,
+       duration:0.5,
+       ease: "power4.out",
+       stagger:0.7
+   })
+
+
+   // contact us section
+   const textAnimationContact = gsap.timeline({
+       scrollTrigger: {
+         trigger: ".contact-us-section",
+         start: "top center",
+       }
+   })
+
+   textAnimationContact.from(".contact-us-dr", {
+       autoAlpha:0,
+       x:-200,
+       duration:0.5,
+       ease: "power4.out",
+   })
+
+   textAnimationContact.from(".contact-image", {
+       autoAlpha:0,
+       y:-500,
+       ease:"Bounce.easeOut",
+       duration:1,
+   })
+
+   textAnimationContact.from(".contact-image-text", {
+       autoAlpha:0,
+       x:-200,
+       duration:0.5,
+       ease: "power4.out",
+   })
+
+   textAnimationContact.from(".contact-icon-dots-image-container", {
+       y:-200,
+       autoAlpha:0,
+       duration: 1,
+       ease: "Power2.easeOut",
+   })
+
+   textAnimationContact.from(".contact-icon-image-container", {
+       y:200,
+       autoAlpha:0,
+       duration: 0.7,
+       ease: "Power2.easeOut",
+   })
+
+      // about us section
+      const headingText = document.querySelector('.about-us-heading').textContent
+      gsap.set(".about-us-heading", {text:{value:''}})
   
-    gsap.from(".about-us-heading-text", {
-        scrollTrigger:{
+      gsap.to(".about-us-heading", {
+          scrollTrigger:{
+              trigger: ".about-us-section",
+              start: "top center",
+          },
+          duration: 2,
+          text:{
+              value:headingText,
+          }, 
+      })
+    
+        const textAnimationAboutus= gsap.timeline({
+            scrollTrigger: {
             trigger: ".about-us-section",
             start: "top center",
-        },
-        duration: 0.5,
-        ease: "power4.out",
-        x:-50
-    })
+            }
+        })
 
-    gsap.from(".about-us-text-second", {
-        scrollTrigger:{
-            trigger: ".about-us-section",
-            start: "top center",
-        },
-        duration: 0.5,
-        ease: "power4.out",
-        x:-50
-    })
+        textAnimationAboutus.from(".about-us-left", {
+            x:-50,
+            autoAlpha:0,
+            duration: 0.7,
+            ease: "power4.out",
+        })
 
-    gsap.from(".about-us-btn-container", {
-        scrollTrigger:{
-            trigger: ".about-us-section",
-            start: "top center",
-        },
-        duration: 0.5,
-        ease: "power4.out",
-        y:200
-    })
+        textAnimationAboutus.from(".about-us-right", {
+            y:-50,
+            autoAlpha:0,
+            duration: 0.7,
+            ease: "power4.out",
+        })
 
+        textAnimationAboutus.from(".about-us-heading-text", {
+            x:-50,
+            autoAlpha:0,
+            duration: 0.7,
+             ease: "power4.out",
+        })
+  
+        textAnimationAboutus.from(".about-us-text-second", {
+            x:-50,
+            autoAlpha:0,
+            duration: 0.5,
+             ease: "power4.out",
+        })
 
-    //membership-benefits-section
-    const textAnimationTl = gsap.timeline({
-        scrollTrigger: {
-            trigger: ".membership-benefits-section",
-            start: "top center",
-        }})
-
-    textAnimationTl.from(".membership-benefits-heading", {
-        autoAlpha:0,
-        x:-200,
-        ease: "power4.out",
-        duration: 0.5,
-    })
-
-    textAnimationTl.from(".membership-image", {
-        autoAlpha:0,
-        y:200,
-        ease: "power4.out",
-        duration: 0.5,
-    })
-
-    textAnimationTl.from(".membership-benefits-heading-text", {
-        autoAlpha:0,
-        y:-200,
-        ease: "power4.out",
-        duration: 0.5,
-    })
-
-    textAnimationTl.from(".pointer", {
-        autoAlpha:0,
-        y:50,
-        duration: 0.5,
-        ease: "power4.out",
-        stagger:0.3
-    })
-
-    textAnimationTl.from(".bg_icon", {
-        y:200,
-        autoAlpha:0,
-        duration: 0.5,
-        ease: "Power2.easeOut",
-    })
-
-    textAnimationTl.from(".register-text", {
-        y:200,
-        autoAlpha:0,
-        duration: 0.5,
-        ease: "Power2.easeOut",
-    })
-
-
-    // blog section
-    const textAnimationT2 = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".blog-section",
-          start: "top center",
-        //   toggleActions: "restart none restart none",
-        }
-    })
-    textAnimationT2.from(".blog-heading", {
-        autoAlpha:0,
-        x:-200,
-        duration:0.5,
-        ease: "power4.out",
-        stagger:0.5
-    })
-
-    textAnimationT2.from(".blog-text", {
-        autoAlpha:0,
-        x:-50,
-        duration:0.5,
-        ease: "power4.out",
-        stagger:0.5
-    })
-    textAnimationT2.from(".blog-img-container", {
-        autoAlpha:0,
-        y:10,
-        duration: 0.5,
-        ease: "power4.out",
-        stagger:0.6,
-    },"<0.5")
-
-    // available-locations-section
-    const textAnimationT3 = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".available-locations-section",
-        //   start: "top center",
-        //   toggleActions: "restart none restart none",
-        }
-    })
-
-    textAnimationT3.from(".available-locations-heading", {
-        autoAlpha:0,
-        x:-200,
-        duration:0.5,
-        ease: "power4.out",
-    })
-
-    textAnimationT3.from(".available-locations-text", {
-        autoAlpha:0,
-        y:50,
-        duration:0.5,
-        ease: "power4.out",
-        stagger:0.7
-    })
-
-
-    // contact us section
-    const textAnimationContact = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".contact-us-section",
-          start: "top center",
-        }
-    })
-
-    textAnimationContact.from(".contact-us-dr", {
-        autoAlpha:0,
-        x:-200,
-        duration:0.5,
-        ease: "power4.out",
-    })
-
-    textAnimationContact.from(".contact-image", {
-        autoAlpha:0,
-        y:-500,
-        ease:"Bounce.easeOut",
-        duration:2,
-    })
-
-    textAnimationContact.from(".contact-image-text", {
-        autoAlpha:0,
-        x:-200,
-        duration:0.5,
-        ease: "power4.out",
-    })
+        textAnimationAboutus.from(".about-us-btn-container", {
+            y:200,
+            autoAlpha:0,
+            duration: 0.5,
+            ease: "power4.out",
+        })
 })
 
 if (document.querySelector('.treatment-section')) {

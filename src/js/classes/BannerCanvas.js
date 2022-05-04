@@ -51,7 +51,7 @@ export class BannerCanvas {
             imageAnimation.from(doctor.scale, {
                 x:0,
                 y:0,
-                duration: 0.5,
+                duration: 0.3,
             })
 
             const saline = new Sprite(res.saline_water.texture)
@@ -61,7 +61,7 @@ export class BannerCanvas {
             imageAnimation.from(saline, {
                 y:-200,
                 ease: "power4.out",
-                duration: 0.5,
+                duration: 0.3,
             })
 
             const checkup = new Sprite(res.check_up_doctor.texture)
@@ -71,7 +71,7 @@ export class BannerCanvas {
             imageAnimation.from(checkup.scale, {
                 x:0,
                 y:0,
-                duration: 0.5,
+                duration: 0.3,
             })
 
             const stethoscope = new Sprite(res.stethoscope.texture)
@@ -81,7 +81,7 @@ export class BannerCanvas {
             imageAnimation.from(stethoscope, {
                 y:-200,
                 ease: "power4.out",
-                duration: 0.5,
+                duration: 0.3,
             })
 
             const injection = new Sprite(res.injection.texture)
@@ -91,7 +91,7 @@ export class BannerCanvas {
             imageAnimation.from(injection, {
                 x:-200,
                 ease: "power4.out",
-                duration: 0.5,
+                duration: 0.3,
             })
 
             const testing = new Sprite(res.testing.texture)
@@ -101,7 +101,7 @@ export class BannerCanvas {
             imageAnimation.from(testing.scale, {
                 x:0,
                 y:0,
-                duration: 0.5,
+                duration: 0.3,
             })
 
             const doctorplus = new Sprite(res.doctor_plus.texture)
@@ -111,7 +111,7 @@ export class BannerCanvas {
             imageAnimation.from(doctorplus.scale, {
                 x:0,
                 y:0,
-                duration: 0.5,
+                duration: 0.3,
             })
 
             const tablet = new Sprite(res.tablet.texture)
@@ -121,7 +121,7 @@ export class BannerCanvas {
             imageAnimation.from(tablet, {
                 x:850,
                 ease: "power4.out",
-                duration: 0.5,
+                duration: 0.3,
             })
 
             const blueicon = new Sprite(res.banner_icon_blue.texture)
@@ -131,7 +131,7 @@ export class BannerCanvas {
             imageAnimation.from(blueicon.scale, {
                 x:0,
                 y:0,
-                duration: 0.5,
+                duration: 0.3,
             })
 
             const yellowicon = new Sprite(res.banner_icon_yellow.texture)
@@ -141,7 +141,7 @@ export class BannerCanvas {
             imageAnimation.from(yellowicon.scale, {
                 x:0,
                 y:0,
-                duration: 0.5,
+                duration: 0.3,
             })
 
             const greenicon = new Sprite(res.banner_icon_green.texture)
@@ -151,7 +151,7 @@ export class BannerCanvas {
             imageAnimation.from(greenicon.scale, {
                 x:0,
                 y:0,
-                duration: 0.5,
+                duration: 0.3,
             })
 
             const bluecircleicon = new Sprite(res.banner_icon_circle_blue.texture)
@@ -161,7 +161,7 @@ export class BannerCanvas {
             imageAnimation.from(bluecircleicon.scale, {
                 x:0,
                 y:0,
-                duration: 0.5,
+                duration: 0.3,
             })
 
             this.app.stage.addChild(doctor)

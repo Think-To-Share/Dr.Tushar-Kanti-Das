@@ -1045,15 +1045,20 @@
             padding-bottom: 15px;
         }
         .about-us-text-second{
+            display: none;
             font-family: $primary-font;
             font-weight: 400;
             color: #6c6d6e;
             @include font-size(1.1rem);
             margin: 0;
+            @media (min-width:992px){
+                display: block;
+            }
         }
         .about-us-btn-container{
             width: 100%;
             margin-top: 44px;
+            display: none;
             .about-us-btn{
                 text-decoration: none;
                 text-align: center;
@@ -1072,6 +1077,9 @@
                     background-color: transparent;
                     color: $primary-color;
                 }
+            }
+            @media (min-width:992px){
+                display: block;
             }
         }
     }
