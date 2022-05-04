@@ -3,21 +3,26 @@
     background-repeat: repeat;
     .main{
         padding: 0;
-     .dr-name{
-        padding-top: 60px;
-        text-align: center;
-        color: #ffffff;
-        font-family: $secondary-font;
-        font-weight: 400;
-        @include font-size(2.2rem);
-    }
-    .dr-qualification{
-        text-align: center;
-        color: #ffffff;
-        font-family: $secondary-font;
-        font-weight: 400;
-        @include font-size(1.2rem);
-    }
+        a{
+            text-decoration: none;
+            .dr-name-text{
+                .dr-name{
+                    padding-top: 60px;
+                    text-align: center;
+                    color: #ffffff;
+                    font-family: $secondary-font;
+                    font-weight: 400;
+                    @include font-size(2.2rem);
+                }
+                .dr-qualification{
+                    text-align: center;
+                    color: #ffffff;
+                    font-family: $secondary-font;
+                    font-weight: 400;
+                    @include font-size(1.2rem);
+                }
+            }
+        }
     .dr-footer-menu{
         ul {
             display: flex;

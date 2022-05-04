@@ -7,22 +7,26 @@
         .header-menu-main{
             display: flex;
             justify-content: space-around;
-            .dr-name-text{
-                .dr-name-header{
-                    color: $primary-color;
-                    font-family: $secondary-font;
-                    font-weight: 400;
-                    @include font-size(1.7rem);
-                    margin: 0;
-                }
-                .dr-qualification-header{
-                    color: #1c2738;
-                    font-family: $secondary-font;
-                    font-weight: 400;
-                    @include font-size(1.2rem);
-                    margin: 0;
+            a{
+                text-decoration: none;
+                .dr-name-text{
+                    .dr-name-header{
+                        color: $primary-color;
+                        font-family: $secondary-font;
+                        font-weight: 400;
+                        @include font-size(1.7rem);
+                        margin: 0;
+                    }
+                    .dr-qualification-header{
+                        color: #1c2738;
+                        font-family: $secondary-font;
+                        font-weight: 400;
+                        @include font-size(1.2rem);
+                        margin: 0;
+                    }
                 }
             }
+            
             .dr-header-menu{
                 display: none;
                 ul {
